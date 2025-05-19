@@ -21,6 +21,7 @@ import {
   GraduationCap,
   Wrench,
   X,
+  Blocks,
 } from "lucide-react";
 import Image from "next/image";
 import profileImg from "../../public/profile-img.jpg";
@@ -85,24 +86,12 @@ export function PortfolioSidebar() {
           </SidebarMenuItem>
 
           <SidebarMenuItem>
-            <SidebarMenuButton asChild isActive={pathname === "/about"}>
-              <Link
-                href="/about"
-                className="flex items-center gap-3 py-2 px-3 text-base"
-              >
-                <User className="!h-5 !w-5" />
-                <span className="text-base">About</span>
-              </Link>
-            </SidebarMenuButton>
-          </SidebarMenuItem>
-
-          <SidebarMenuItem>
             <SidebarMenuButton asChild isActive={pathname === "/projects"}>
               <Link
                 href="/projects"
                 className="flex items-center gap-3 py-2 px-3 text-base"
               >
-                <Briefcase className="!h-5 !w-5" />
+                <Blocks className="!h-5 !w-5" />
                 <span className="text-base">Projects</span>
               </Link>
             </SidebarMenuButton>
@@ -116,6 +105,18 @@ export function PortfolioSidebar() {
               >
                 <MessageSquare className="!h-5 !w-5" />
                 <span className="text-base">Blog</span>
+              </Link>
+            </SidebarMenuButton>
+          </SidebarMenuItem>
+
+          <SidebarMenuItem>
+            <SidebarMenuButton asChild isActive={pathname === "/about"}>
+              <Link
+                href="/about"
+                className="flex items-center gap-3 py-2 px-3 text-base"
+              >
+                <User className="!h-5 !w-5" />
+                <span className="text-base">About</span>
               </Link>
             </SidebarMenuButton>
           </SidebarMenuItem>
