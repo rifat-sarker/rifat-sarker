@@ -98,13 +98,13 @@ export function PortfolioSidebar() {
           </SidebarMenuItem>
 
           <SidebarMenuItem>
-            <SidebarMenuButton asChild isActive={pathname === "/blog"}>
+            <SidebarMenuButton asChild isActive={pathname === "/blogs"}>
               <Link
-                href="/blog"
+                href="/blogs"
                 className="flex items-center gap-3 py-2 px-3 text-base"
               >
                 <MessageSquare className="!h-5 !w-5" />
-                <span className="text-base">Blog</span>
+                <span className="text-base">Blogs</span>
               </Link>
             </SidebarMenuButton>
           </SidebarMenuItem>

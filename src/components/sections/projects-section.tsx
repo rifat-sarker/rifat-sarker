@@ -5,7 +5,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Tabs, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { ExternalLink, Github } from "lucide-react";
+import { ExternalLink,  } from "lucide-react";
 import Image from "next/image";
 import { FiGithub } from "react-icons/fi";
 
@@ -147,47 +147,48 @@ export function ProjectsSection() {
             <motion.div
               key={project.id}
               layout
-              initial={{ opacity: 0, scale: 0.8 }}
+              initial={{ opacity: 0, scale: 0.95 }}
               animate={{ opacity: 1, scale: 1 }}
-              exit={{ opacity: 0, scale: 0.8 }}
-              transition={{ duration: 0.5 }}
-              className="group cursor-pointer"
+              exit={{ opacity: 0, scale: 0.95 }}
+              transition={{ duration: 0.4 }}
               onClick={() => setSelectedProject(project.id)}
+              className="bg-card border border-border rounded-2xl shadow-md hover:shadow-xl transition-shadow duration-300 overflow-hidden cursor-pointer group"
             >
-              <div className="relative overflow-hidden rounded-lg aspect-square">
+              <div className="relative aspect-[4/3] w-full overflow-hidden">
                 <Image
                   src={project.image}
                   alt={project.title}
-                  height={300}
-                  width={300}
-                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                  fill
+                  className="object-cover group-hover:scale-105 transition-transform duration-500"
                 />
+              </div>
 
-                <div className="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-center items-center p-4 text-white">
-                
-                  <h3 className="text-xl font-bold mb-2">{project.title}</h3>
-                  <p className="text-sm text-center mb-4 line-clamp-3">
-                    {project.description}
-                  </p>
-                  <div className="flex flex-wrap justify-center gap-2 mb-4">
-                    {project.technologies.slice(0, 3).map((tech) => (
-                      <Badge
-                        key={tech}
-                        variant="outline"
-                        className="bg-white/10 text-white border-none"
-                      >
-                        {tech}
-                      </Badge>
-                    ))}
-                    {project.technologies.length > 3 && (
-                      <Badge
-                        variant="outline"
-                        className="bg-white/10 text-white border-none"
-                      >
-                        +{project.technologies.length - 3}
-                      </Badge>
-                    )}
-                  </div>
+              <div className="p-4 flex flex-col gap-2">
+                <h3 className="text-lg font-semibold tracking-tight">
+                  {project.title}
+                </h3>
+                <p className="text-sm text-muted-foreground line-clamp-3">
+                  {project.description}
+                </p>
+
+                <div className="flex flex-wrap gap-2 mt-2">
+                  {project.technologies.slice(0, 3).map((tech) => (
+                    <Badge
+                      key={tech}
+                      variant="outline"
+                      className="text-xs px-2 py-0.5 rounded-md"
+                    >
+                      {tech}
+                    </Badge>
+                  ))}
+                  {project.technologies.length > 3 && (
+                    <Badge
+                      variant="outline"
+                      className="text-xs px-2 py-0.5 rounded-md"
+                    >
+                      +{project.technologies.length - 3}
+                    </Badge>
+                  )}
                 </div>
               </div>
             </motion.div>
