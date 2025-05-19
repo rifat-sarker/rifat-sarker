@@ -15,7 +15,6 @@ import { Button } from "@/components/ui/button";
 import {
   Home,
   User,
-  Briefcase,
   MessageSquare,
   Mail,
   GraduationCap,

@@ -25,7 +25,7 @@ export default function HomeSection() {
       variants={container}
       initial="hidden"
       animate="show"
-      className="space-y-8 w-full py-24"
+      className="space-y-8 w-full"
     >
       <div className="flex flex-col md:flex-row gap-8 items-center ">
         <motion.div variants={item} className="w-full md:w-1/3">

@@ -60,11 +60,13 @@ export function ContactSection() {
   };
 
   return (
-    <section className="py-20 bg-muted/30">
+    <section className=" bg-muted/30">
       <div className="container">
-        <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">Get In Touch</h2>
-          <p className="text-muted-foreground max-w-2xl mx-auto">
+        <div className=" mb-16">
+          <h2 className="text-3xl font-bold mb-4 border-b-2 inline-block border-primary pb-2">
+            Get In Touch
+          </h2>
+          <p className="text-muted-foreground max-w-2xl">
             Have a project in mind or want to discuss opportunities? I'd love to
             hear from you!
           </p>

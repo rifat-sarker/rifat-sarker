@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { GraduationCap } from "lucide-react";
+
 
 export function EducationSection() {
   const container = {
@@ -25,15 +25,15 @@ export function EducationSection() {
       initial="hidden"
       whileInView="show"
       viewport={{ once: true }}
-      className="py-24 w-full bg-background"
+      className=" w-full bg-background"
     >
-      <div className="max-w-6xl mx-auto px-4 space-y-16">
-        <motion.div variants={item} className="text-center">
-          <h2 className="text-4xl font-bold mb-2 inline-block border-b-4 border-primary pb-3">
-            <GraduationCap className="inline-block mr-3 mb-1" size={32} />
+      <div className="max-w-6xl space-y-16">
+        <motion.div variants={item}>
+          <h2 className="text-3xl font-bold mb-6 inline-block border-b-2 border-primary pb-2">
+            {/* <GraduationCap className="inline-block mr-3 mb-1" size={32} /> */}
             Education
           </h2>
-          <p className="text-muted-foreground mt-4 max-w-2xl mx-auto text-lg">
+          <p className="text-muted-foreground mt-4 max-w-2xl text-lg">
             My academic journey reflects dedication to both science and
             software, forming a strong foundation for my full-stack development
             career.

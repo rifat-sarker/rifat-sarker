@@ -5,7 +5,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Tabs, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { ExternalLink,  } from "lucide-react";
+import { ExternalLink } from "lucide-react";
 import Image from "next/image";
 import { FiGithub } from "react-icons/fi";
 
@@ -19,7 +19,8 @@ const projectsData = [
     technologies: ["React", "Node.js", "Express", "MongoDB"],
     description:
       "A dynamic and user-friendly bicycle e-commerce platform with real-time inventory management, user authentication, and payment processing.",
-    githubUrl: "https://github.com/yourusername/cyclify",
+    clientUrl: "https://github.com/yourusername/cyclify",
+    serverUrl: "https://github.com/yourusername/cyclify",
     liveUrl: "https://cyclify-demo.vercel.app",
   },
   {
@@ -36,7 +37,8 @@ const projectsData = [
     ],
     description:
       "A digital platform that hosts a collection of articles, posts, and entries with a modern UI, comment system, and content management.",
-    githubUrl: "https://github.com/yourusername/mixhub-blog",
+    clientUrl: "https://github.com/yourusername/cyclify",
+    serverUrl: "https://github.com/yourusername/cyclify",
     liveUrl: "https://mixhub-blog.vercel.app",
   },
   {
@@ -47,7 +49,8 @@ const projectsData = [
     technologies: ["React", "Material UI", "Redux", "Firebase"],
     description:
       "Dive into detailed insights on smartphones, laptops, and more from top tech companies with advanced filtering and comparison tools.",
-    githubUrl: "https://github.com/yourusername/tech-radar",
+    clientUrl: "https://github.com/yourusername/cyclify",
+    serverUrl: "https://github.com/yourusername/cyclify",
     liveUrl: "https://tech-radar-demo.vercel.app",
   },
   {
@@ -58,7 +61,8 @@ const projectsData = [
     technologies: ["Node.js", "Express", "MongoDB", "JWT", "Jest"],
     description:
       "A comprehensive RESTful API for task management with authentication, authorization, and data persistence.",
-    githubUrl: "https://github.com/yourusername/task-manager-api",
+    clientUrl: "https://github.com/yourusername/cyclify",
+    serverUrl: "https://github.com/yourusername/cyclify",
     liveUrl: "https://task-manager-api-docs.vercel.app",
   },
   {
@@ -69,7 +73,8 @@ const projectsData = [
     technologies: ["React", "TypeScript", "Chart.js", "OpenWeatherMap API"],
     description:
       "Real-time weather information with interactive maps, forecasts, and historical data visualization.",
-    githubUrl: "https://github.com/yourusername/weather-dashboard",
+    clientUrl: "https://github.com/yourusername/cyclify",
+    serverUrl: "https://github.com/yourusername/cyclify",
     liveUrl: "https://weather-dashboard-demo.vercel.app",
   },
   {
@@ -80,7 +85,8 @@ const projectsData = [
     technologies: ["Next.js", "Node.js", "PostgreSQL", "Prisma", "AWS S3"],
     description:
       "A full-stack e-learning platform with course management, student progress tracking, and interactive lessons.",
-    githubUrl: "https://github.com/yourusername/e-learning-platform",
+    clientUrl: "https://github.com/yourusername/cyclify",
+    serverUrl: "https://github.com/yourusername/cyclify",
     liveUrl: "https://e-learning-platform-demo.vercel.app",
   },
 ];
@@ -210,7 +216,7 @@ export function ProjectsSection() {
               initial={{ scale: 0.9, opacity: 0 }}
               animate={{ scale: 1, opacity: 1 }}
               exit={{ scale: 0.9, opacity: 0 }}
-              className="bg-card max-w-3xl w-full max-h-[90vh] overflow-auto rounded-lg p-4 md:p-6"
+              className="bg-card max-w-6xl w-full max-h-[90vh] overflow-auto rounded-lg p-4 md:p-6"
               onClick={(e) => e.stopPropagation()}
             >
               {(() => {
@@ -259,15 +265,24 @@ export function ProjectsSection() {
                       </Button>
                       <Button variant="outline" asChild>
                         <a
-                          href={project.githubUrl}
+                          href={project.clientUrl}
                           target="_blank"
                           rel="noopener noreferrer"
                         >
-                          <FiGithub className="mr-2 h-4 w-4" /> View Code
+                          <FiGithub className="mr-2 h-4 w-4" /> Client
+                        </a>
+                      </Button>
+                      <Button variant="outline" asChild>
+                        <a
+                          href={project.serverUrl}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          <FiGithub className="mr-2 h-4 w-4" /> Server
                         </a>
                       </Button>
                       <Button
-                        variant="ghost"
+                        // variant="ghost"
                         className="ml-auto"
                         onClick={() => setSelectedProject(null)}
                       >

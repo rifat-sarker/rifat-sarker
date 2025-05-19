@@ -8,16 +8,16 @@ import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import {
   Home,
   User,
-  FileText,
   Briefcase,
   MessageSquare,
   Mail,
-  Github,
-  Linkedin,
-  Facebook,
-  Twitter,
   Menu,
+  GraduationCap,
+  Wrench,
+  X,
 } from "lucide-react";
+import { FiFacebook, FiGithub } from "react-icons/fi";
+import { CiLinkedin } from "react-icons/ci";
 import Image from "next/image";
 import profileImg from "../../public/profile-img.jpg";
 
@@ -27,10 +27,11 @@ export function MobileNav() {
 
   const routes = [
     { href: "/", label: "Home", icon: Home },
-    { href: "/about", label: "About", icon: User },
-    { href: "/resume", label: "Resume", icon: FileText },
+    { href: "/education", label: "Education", icon: GraduationCap },
+    { href: "/skills", label: "Skills", icon: Wrench },
     { href: "/projects", label: "Projects", icon: Briefcase },
-    { href: "/blog", label: "Blog", icon: MessageSquare },
+    { href: "/blogs", label: "Blogs", icon: MessageSquare },
+    { href: "/about", label: "About", icon: User },
     { href: "/contact", label: "Contact", icon: Mail },
   ];
 
@@ -95,7 +96,7 @@ export function MobileNav() {
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    <Github className="h-5 w-5" />
+                    <FiGithub className="h-5 w-5" />
                     <span className="sr-only">GitHub</span>
                   </a>
                 </Button>
@@ -105,7 +106,7 @@ export function MobileNav() {
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    <Linkedin className="h-5 w-5" />
+                    <CiLinkedin className="h-5 w-5" />
                     <span className="sr-only">LinkedIn</span>
                   </a>
                 </Button>
@@ -115,7 +116,7 @@ export function MobileNav() {
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    <Twitter className="h-5 w-5" />
+                    <X className="h-5 w-5" />
                     <span className="sr-only">Twitter</span>
                   </a>
                 </Button>
@@ -125,7 +126,7 @@ export function MobileNav() {
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    <Facebook className="h-5 w-5" />
+                    <FiFacebook className="h-5 w-5" />
                     <span className="sr-only">Facebook</span>
                   </a>
                 </Button>

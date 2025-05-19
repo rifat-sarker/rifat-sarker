@@ -13,6 +13,7 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Calendar, BookOpen } from "lucide-react";
 import { toast } from "sonner";
+import Image from "next/image";
 
 
 // Static data that will be replaced with API calls later
@@ -137,9 +138,11 @@ export function BlogSection() {
               className="overflow-hidden group hover:shadow-lg transition-all duration-300 border-muted/50 h-full flex flex-col"
             >
               <div className="relative overflow-hidden aspect-[16/9]">
-                <img
+                <Image
                   src={post.image || "/placeholder.svg"}
                   alt={post.title}
+                  height={200}
+                  width={300}
                   className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                 />
                 <div className="absolute top-3 left-3">

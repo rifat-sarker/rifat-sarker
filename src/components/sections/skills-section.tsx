@@ -6,7 +6,6 @@ import {
   Database,
   Monitor,
   Server,
-  Sparkles,
   Wrench,
 } from "lucide-react";
 
@@ -32,15 +31,15 @@ export function SkillsSection() {
       initial="hidden"
       whileInView="show"
       viewport={{ once: true }}
-      className="py-24 w-full bg-background"
+      className="w-full bg-background"
     >
-      <div className="max-w-6xl mx-auto px-4 space-y-16">
-        <motion.div variants={item} className="text-center">
-          <h2 className="text-4xl font-bold mb-2 inline-block border-b-4 border-primary pb-3">
-            <Sparkles className="inline-block mr-3 mb-1" size={32} />
+      <div className="max-w-6xl mx-auto space-y-16">
+        <motion.div variants={item}>
+          <h2 className="text-3xl font-bold mb-2 inline-block border-b-2 border-primary pb-2">
+            {/* <Sparkles className="inline-block mr-3 mb-1" size={32} /> */}
             Skills
           </h2>
-          <p className="text-muted-foreground mt-4 max-w-2xl mx-auto text-lg">
+          <p className="text-muted-foreground mt-4 max-w-2xl text-lg">
             A well-rounded skill set combining frontend design, backend logic,
             database expertise, and developer tools.
           </p>
