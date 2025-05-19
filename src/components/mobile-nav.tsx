@@ -44,7 +44,7 @@ export function MobileNav() {
       <Sheet open={open} onOpenChange={setOpen}>
         <SheetTrigger asChild>
           <Button variant="ghost" size="icon">
-            <Menu className="h-6 w-6" />
+            <Menu className="!h-7 !w-7" />
             <span className="sr-only">Toggle menu</span>
           </Button>
         </SheetTrigger>
@@ -79,7 +79,7 @@ export function MobileNav() {
                             : "hover:bg-muted"
                         }`}
                       >
-                        <route.icon className="h-5 w-5" />
+                        <route.icon className="!h-6 !w-6" />
                         <span>{route.label}</span>
                       </Link>
                     </li>
@@ -95,8 +95,9 @@ export function MobileNav() {
                     href="https://github.com/rifat-sarker"
                     target="_blank"
                     rel="noopener noreferrer"
+                    className="duration-300 hover:scale-150"
                   >
-                    <FiGithub className="h-5 w-5" />
+                    <FiGithub className="!h-6 !w-6" />
                     <span className="sr-only">GitHub</span>
                   </a>
                 </Button>
@@ -105,8 +106,9 @@ export function MobileNav() {
                     href="https://linkedin.com/in/rifatswd"
                     target="_blank"
                     rel="noopener noreferrer"
+                    className="duration-300 hover:scale-150"
                   >
-                    <CiLinkedin className="h-5 w-5" />
+                    <CiLinkedin className="!h-6 !w-6" />
                     <span className="sr-only">LinkedIn</span>
                   </a>
                 </Button>
@@ -115,8 +117,9 @@ export function MobileNav() {
                     href="https://twitter.com/rifatswd"
                     target="_blank"
                     rel="noopener noreferrer"
+                    className="duration-300 hover:scale-150"
                   >
-                    <X className="h-5 w-5" />
+                    <X className="!h-6 !w-6" />
                     <span className="sr-only">Twitter</span>
                   </a>
                 </Button>
@@ -125,8 +128,9 @@ export function MobileNav() {
                     href="https://facebook.com/rifatswd"
                     target="_blank"
                     rel="noopener noreferrer"
+                    className="duration-300 hover:scale-150"
                   >
-                    <FiFacebook className="h-5 w-5" />
+                    <FiFacebook className="!h-6 !w-6" />
                     <span className="sr-only">Facebook</span>
                   </a>
                 </Button>

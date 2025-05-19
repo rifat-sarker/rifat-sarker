@@ -60,10 +60,10 @@ export function ContactSection() {
   };
 
   return (
-    <section className=" bg-muted/30">
+    <section className=" ">
       <div className="container">
         <div className=" mb-16">
-          <h2 className="text-3xl font-bold mb-4 border-b-2 inline-block border-primary pb-2">
+          <h2 className="text-3xl font-bold mb-4 border-b-2 border-primary pb-2">
             Get In Touch
           </h2>
           <p className="text-muted-foreground max-w-2xl">

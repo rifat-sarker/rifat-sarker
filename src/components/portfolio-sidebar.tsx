@@ -9,7 +9,6 @@ import {
   SidebarHeader,
   SidebarMenu,
   SidebarMenuItem,
-  SidebarMenuButton,
 } from "@/components/ui/sidebar";
 import { Button } from "@/components/ui/button";
 import {
@@ -26,6 +25,7 @@ import Image from "next/image";
 import profileImg from "../../public/profile-img.jpg";
 import { FiFacebook, FiGithub } from "react-icons/fi";
 import { CiLinkedin } from "react-icons/ci";
+import SidebarMenuButton from "./sidebar-menu-button";
 
 export function PortfolioSidebar() {
   const pathname = usePathname();
@@ -47,7 +47,7 @@ export function PortfolioSidebar() {
         </Link>
       </SidebarHeader>
       <SidebarContent className="p-2 mx-auto">
-        <SidebarMenu>
+        <SidebarMenu className="space-y-2">
           <SidebarMenuItem>
             <SidebarMenuButton asChild isActive={pathname === "/"}>
               <Link
@@ -135,14 +135,15 @@ export function PortfolioSidebar() {
       </SidebarContent>
 
       <SidebarFooter className="p-4">
-        <div className="flex gap-2 justify-center">
+        <div className="flex gap-2 justify-center ">
           <Button variant="ghost" size="icon" asChild>
             <a
               href="https://github.com/rifat-sarker"
               target="_blank"
               rel="noopener noreferrer"
+              className="duration-300 hover:scale-150"
             >
-              <FiGithub className="!h-5 !w-5" />
+              <FiGithub className="!h-6 !w-6 " />
               <span className="sr-only">GitHub</span>
             </a>
           </Button>
@@ -151,8 +152,9 @@ export function PortfolioSidebar() {
               href="https://linkedin.com/in/rifatswd"
               target="_blank"
               rel="noopener noreferrer"
+              className="duration-300 hover:scale-150"
             >
-              <CiLinkedin className="!h-5 !w-5" />
+              <CiLinkedin className="!h-6 !w-6" />
               <span className="sr-only">LinkedIn</span>
             </a>
           </Button>
@@ -161,8 +163,9 @@ export function PortfolioSidebar() {
               href="https://twitter.com/rifatswd"
               target="_blank"
               rel="noopener noreferrer"
+              className="duration-300 hover:scale-150"
             >
-              <X className="!h-5 !w-5" />
+              <X className="!h-6 !w-6" />
               <span className="sr-only">Twitter</span>
             </a>
           </Button>
@@ -171,8 +174,9 @@ export function PortfolioSidebar() {
               href="https://facebook.com/rifatswd"
               target="_blank"
               rel="noopener noreferrer"
+              className="duration-300 hover:scale-150"
             >
-              <FiFacebook className="!h-5 !w-5" />
+              <FiFacebook className="!h-6 !w-6" />
               <span className="sr-only">Facebook</span>
             </a>
           </Button>
