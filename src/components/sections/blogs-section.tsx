@@ -2,11 +2,20 @@
 
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
-import Image from "next/image";
-import { Calendar, Clock, ArrowRight } from "lucide-react";
+import {
+  Card,
+  CardContent,
+  CardFooter,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
+import { ArrowRight, Calendar, BookOpen } from "lucide-react";
+import { toast } from "sonner";
 
+
+// Static data that will be replaced with API calls later
 const blogPostsData = [
   {
     id: 1,
@@ -14,7 +23,6 @@ const blogPostsData = [
     excerpt:
       "Learn how to set up TypeScript in your projects and take advantage of its powerful features.",
     date: "May 15, 2023",
-    readTime: "5 min read",
     category: "TypeScript",
     image: "/image.jpg",
   },
@@ -24,7 +32,6 @@ const blogPostsData = [
     excerpt:
       "A comprehensive guide to creating robust and scalable APIs using Node.js and Express.",
     date: "April 22, 2023",
-    readTime: "8 min read",
     category: "Backend",
     image: "/image.jpg",
   },
@@ -34,7 +41,6 @@ const blogPostsData = [
     excerpt:
       "Discover practical strategies to improve the performance of your React applications.",
     date: "March 10, 2023",
-    readTime: "6 min read",
     category: "React",
     image: "/image.jpg",
   },
@@ -44,7 +50,6 @@ const blogPostsData = [
     excerpt:
       "Learn how to use Prisma ORM with PostgreSQL for efficient database management.",
     date: "February 28, 2023",
-    readTime: "7 min read",
     category: "Database",
     image: "/image.jpg",
   },
@@ -52,7 +57,7 @@ const blogPostsData = [
 
 export function BlogSection() {
   const [blogPosts, setBlogPosts] = useState([]);
-  const [loading, setLoading] = useState(false);
+  const [loading, setLoading] = useState(true);
 
   const container = {
     hidden: { opacity: 0 },
@@ -70,19 +75,37 @@ export function BlogSection() {
   };
 
   useEffect(() => {
-    // Simulating API load
-    setTimeout(() => {
-      setBlogPosts(blogPostsData);
-      setLoading(false);
-    }, 1000);
-  }, []);
+    // Simulate API call with static data
+    const fetchBlogPosts = async () => {
+      try {
+        // In a real app, this would be:
+        // const response = await fetch('/api/blog-posts')
+        // const data = await response.json()
+
+        // Simulate loading delay
+        await new Promise((resolve) => setTimeout(resolve, 1000));
+
+        setBlogPosts(blogPostsData);
+        setLoading(false);
+      } catch (error) {
+        toast({
+          variant: "destructive",
+          title: "Error",
+          description: "Failed to load blog posts. Please try again later.",
+        });
+        setLoading(false);
+      }
+    };
+
+    fetchBlogPosts();
+  }, [toast]);
 
   return (
     <motion.div
       variants={container}
       initial="hidden"
       animate="show"
-      className="space-y-12 w-full"
+      className="space-y-8 w-full"
     >
       <motion.div variants={item}>
         <h2 className="text-3xl font-bold mb-6 inline-block border-b-2 border-primary pb-2">
@@ -95,62 +118,70 @@ export function BlogSection() {
       </motion.div>
 
       {loading ? (
-        <div className="grid grid-cols-1 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {[1, 2, 3, 4].map((i) => (
             <div
               key={i}
-              className="rounded-lg bg-muted animate-pulse h-40"
+              className="rounded-lg bg-muted animate-pulse h-[350px]"
             ></div>
           ))}
         </div>
       ) : (
-        <motion.div variants={item} className="space-y-6">
+        <motion.div
+          variants={item}
+          className="grid grid-cols-1 md:grid-cols-2 gap-8"
+        >
           {blogPosts.map((post) => (
-            <motion.div
+            <Card
               key={post.id}
-              className="flex flex-col md:flex-row gap-4 items-start border border-border rounded-lg p-4 hover:shadow-md transition-shadow"
+              className="overflow-hidden group hover:shadow-lg transition-all duration-300 border-muted/50 h-full flex flex-col"
             >
-              <div className="w-full md:w-48 flex-shrink-0">
-                <Image
-                  src={post.image}
+              <div className="relative overflow-hidden aspect-[16/9]">
+                <img
+                  src={post.image || "/placeholder.svg"}
                   alt={post.title}
-                  width={1920}
-                  height={1080}
-                  className="w-full h-full object-cover rounded-md"
+                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                 />
-              </div>
-              <div className="flex-1 space-y-2">
-                <Badge>{post.category}</Badge>
-                <h3 className="text-xl font-semibold line-clamp-2">
-                  {post.title}
-                </h3>
-                <div className="text-sm text-muted-foreground flex gap-4">
-                  <span className="flex items-center gap-1">
-                    <Calendar className="w-4 h-4" />
-                    {post.date}
-                  </span>
-                  <span className="flex items-center gap-1">
-                    <Clock className="w-4 h-4" />
-                    {post.readTime}
-                  </span>
+                <div className="absolute top-3 left-3">
+                  <Badge className="bg-primary hover:bg-primary text-primary-foreground">
+                    {post.category}
+                  </Badge>
                 </div>
-                <p className="text-muted-foreground line-clamp-3 text-sm">
+              </div>
+              <CardHeader className="pb-2">
+                <div className="flex items-center text-xs text-muted-foreground mb-2">
+                  <Calendar className="h-3 w-3 mr-1.5" />
+                  {post.date}
+                </div>
+                <CardTitle className="line-clamp-2 group-hover:text-primary transition-colors">
+                  {post.title}
+                </CardTitle>
+              </CardHeader>
+              <CardContent className="pb-4 flex-grow">
+                <p className="text-muted-foreground text-sm line-clamp-3">
                   {post.excerpt}
                 </p>
+              </CardContent>
+              <CardFooter className="pt-0">
                 <Button
-                  variant="link"
-                  className="p-0 h-auto text-primary gap-1 text-sm"
+                  variant="ghost"
+                  size="sm"
+                  className="gap-1 p-0 h-auto font-medium text-primary hover:text-primary/80 hover:bg-transparent"
                 >
-                  Read More <ArrowRight className="w-4 h-4" />
+                  Read Article{" "}
+                  <ArrowRight className="h-3.5 w-3.5 ml-1 transition-transform group-hover:translate-x-1" />
                 </Button>
-              </div>
-            </motion.div>
+              </CardFooter>
+            </Card>
           ))}
         </motion.div>
       )}
 
-      <motion.div variants={item} className="flex justify-center mt-8">
-        <Button variant="outline">View All Posts</Button>
+      <motion.div variants={item} className="flex justify-center mt-12">
+        <Button className="gap-2">
+          <BookOpen className="h-4 w-4" />
+          View All Articles
+        </Button>
       </motion.div>
     </motion.div>
   );
