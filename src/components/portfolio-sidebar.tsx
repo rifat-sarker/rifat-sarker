@@ -34,12 +34,10 @@ export function PortfolioSidebar() {
     <Sidebar className="border-r">
       <SidebarHeader className="p-0">
         <Link href="/" className="flex items-center gap-2 ">
-          <div className="relative mx-auto">
+          <div className="relative w-full">
             <Image
-              className=" mx-auto"
+              className="w-full h-auto object-cover"
               src={profileImg}
-              height={4}
-              width={490}
               alt="profile-image"
             />
             <h1 className="absolute bottom-0 py-2 text-center bg-[#00A3E1] opacity-80 w-full text-white text-lg font-semibold">
@@ -52,54 +50,78 @@ export function PortfolioSidebar() {
         <SidebarMenu>
           <SidebarMenuItem>
             <SidebarMenuButton asChild isActive={pathname === "/"}>
-              <Link href="/">
-                <Home className="h-5 w-5" />
-                <span>Home</span>
+              <Link
+                href="/"
+                className="flex items-center gap-3 py-2 px-3 text-base"
+              >
+                <Home className="!h-5 !w-5" />
+                <span className="text-base">Home</span>
               </Link>
             </SidebarMenuButton>
           </SidebarMenuItem>
+
           <SidebarMenuItem>
             <SidebarMenuButton asChild isActive={pathname === "/about"}>
-              <Link href="/about">
-                <User className="h-5 w-5" />
-                <span>About</span>
+              <Link
+                href="/about"
+                className="flex items-center gap-3 py-2 px-3 text-base"
+              >
+                <User className="!h-5 !w-5" />
+                <span className="text-base">About</span>
               </Link>
             </SidebarMenuButton>
           </SidebarMenuItem>
+
           <SidebarMenuItem>
             <SidebarMenuButton asChild isActive={pathname === "/resume"}>
-              <Link href="/resume">
-                <FileText className="h-5 w-5" />
-                <span>Resume</span>
+              <Link
+                href="/resume"
+                className="flex items-center gap-3 py-2 px-3 text-base"
+              >
+                <FileText className="!h-5 !w-5" />
+                <span className="text-base">Resume</span>
               </Link>
             </SidebarMenuButton>
           </SidebarMenuItem>
+
           <SidebarMenuItem>
             <SidebarMenuButton asChild isActive={pathname === "/projects"}>
-              <Link href="/projects">
-                <Briefcase className="h-5 w-5" />
-                <span>Projects</span>
+              <Link
+                href="/projects"
+                className="flex items-center gap-3 py-2 px-3 text-base"
+              >
+                <Briefcase className="!h-5 !w-5" />
+                <span className="text-base">Projects</span>
               </Link>
             </SidebarMenuButton>
           </SidebarMenuItem>
+
           <SidebarMenuItem>
             <SidebarMenuButton asChild isActive={pathname === "/blog"}>
-              <Link href="/blog">
-                <MessageSquare className="h-5 w-5" />
-                <span>Blog</span>
+              <Link
+                href="/blog"
+                className="flex items-center gap-3 py-2 px-3 text-base"
+              >
+                <MessageSquare className="!h-5 !w-5" />
+                <span className="text-base">Blog</span>
               </Link>
             </SidebarMenuButton>
           </SidebarMenuItem>
+
           <SidebarMenuItem>
             <SidebarMenuButton asChild isActive={pathname === "/contact"}>
-              <Link href="/contact">
-                <Mail className="h-5 w-5" />
-                <span>Contact</span>
+              <Link
+                href="/contact"
+                className="flex items-center gap-3 py-2 px-3 text-base"
+              >
+                <Mail className="!h-5 !w-5" />
+                <span className="text-base">Contact</span>
               </Link>
             </SidebarMenuButton>
           </SidebarMenuItem>
         </SidebarMenu>
       </SidebarContent>
+
       <SidebarFooter className="p-4">
         <div className="flex gap-2 justify-center">
           <Button variant="ghost" size="icon" asChild>
@@ -108,7 +130,7 @@ export function PortfolioSidebar() {
               target="_blank"
               rel="noopener noreferrer"
             >
-              <Github className="h-5 w-5" />
+              <Github className="!h-5 !w-5" />
               <span className="sr-only">GitHub</span>
             </a>
           </Button>
@@ -118,7 +140,7 @@ export function PortfolioSidebar() {
               target="_blank"
               rel="noopener noreferrer"
             >
-              <Linkedin className="h-5 w-5" />
+              <Linkedin className="!h-5 !w-5" />
               <span className="sr-only">LinkedIn</span>
             </a>
           </Button>
@@ -128,7 +150,7 @@ export function PortfolioSidebar() {
               target="_blank"
               rel="noopener noreferrer"
             >
-              <Twitter className="h-5 w-5" />
+              <Twitter className="!h-5 !w-5" />
               <span className="sr-only">Twitter</span>
             </a>
           </Button>
@@ -138,11 +160,13 @@ export function PortfolioSidebar() {
               target="_blank"
               rel="noopener noreferrer"
             >
-              <Facebook className="h-5 w-5" />
+              <Facebook className="!h-5 !w-5" />
               <span className="sr-only">Facebook</span>
             </a>
           </Button>
         </div>
+        <p className="text-sm text-center opacity-70">2024 ©Rifat Sarker.</p>
+        {/* <p className="text-sm text-center">All rights reserved.</p> */}
       </SidebarFooter>
     </Sidebar>
   );
