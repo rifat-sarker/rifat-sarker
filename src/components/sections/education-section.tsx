@@ -1,7 +1,8 @@
 "use client";
 
 import { motion } from "framer-motion";
-
+import { Badge } from "../ui/badge";
+import Link from "next/link";
 
 export function EducationSection() {
   const container = {
@@ -20,62 +21,132 @@ export function EducationSection() {
   };
 
   return (
-    <motion.section
+    <motion.div
       variants={container}
       initial="hidden"
-      whileInView="show"
-      viewport={{ once: true }}
-      className=" w-full bg-background"
+      animate="show"
+      className="space-y-10 w-full"
     >
-      <div className="max-w-6xl space-y-16">
-        <motion.div variants={item}>
-          <h2 className="text-3xl font-bold mb-6 inline-block border-b-2 border-primary pb-2">
-            {/* <GraduationCap className="inline-block mr-3 mb-1" size={32} /> */}
-            Education
-          </h2>
-          <p className="text-muted-foreground mt-4 max-w-2xl text-lg">
-            My academic journey reflects dedication to both science and
-            software, forming a strong foundation for my full-stack development
-            career.
-          </p>
-        </motion.div>
+      <motion.div variants={item}>
+        <h2 className="text-3xl font-bold mb-6 inline-block border-b-2 border-primary pb-2">
+          Education
+        </h2>
+      </motion.div>
 
-        <motion.div
-          variants={item}
-          className="grid grid-cols-1 md:grid-cols-2 gap-10"
-        >
-          <div className="p-8 border rounded-2xl shadow-md bg-card hover:shadow-lg transition-all duration-300">
-            <h3 className="text-2xl font-semibold mb-1">
-              Bachelor of Science (BSc)
-            </h3>
-            <p className="text-primary font-medium text-lg mb-2">
-              Major: Physics
-            </p>
-            <p className="text-muted-foreground text-base mb-2">
-              Institution: National University, Bangladesh
-            </p>
-            <p className="text-muted-foreground text-base mb-2">
-              Current Year: 3rd Year (Honours) – Almost completed
-            </p>
-            <p className="text-muted-foreground text-base">
-              Graduation Expected: 2026
+      <motion.div variants={item}>
+        <div className="space-y-6">
+          <div className="relative pl-6 border-l-2 border-muted pb-6">
+            <div className="absolute w-3 h-3 bg-primary rounded-full -left-[7px] top-1.5"></div>
+            <div className="mb-1">
+              <Badge className="mb-2">2019 - 2026</Badge>
+              <h4 className="text-lg font-medium">
+                Bachelor of Science in Physics
+              </h4>
+              <p className="text-muted-foreground">National University</p>
+            </div>
+            <p className="text-sm text-muted-foreground mt-2">
+              3rd year(almost completed)
             </p>
           </div>
 
-          <div className="p-8 border rounded-2xl shadow-md bg-card hover:shadow-lg transition-all duration-300">
-            <h3 className="text-2xl font-semibold mb-1">
-              Higher Secondary Certificate (HSC)
-            </h3>
-            <p className="text-primary font-medium text-lg mb-2">
-              Science Group
+          <div className="relative pl-6 border-l-2 border-muted">
+            <div className="absolute w-3 h-3 bg-primary rounded-full -left-[7px] top-1.5"></div>
+            <div className="mb-1">
+              <Badge className="mb-2">2017 - 2019</Badge>
+              <h4 className="text-lg font-medium">
+                Higher Secondary Certificate
+              </h4>
+              <p className="text-muted-foreground">
+                Ibrahim Khan Government College
+              </p>
+            </div>
+            <p className="text-sm text-muted-foreground mt-2">
+              Science group with focus on Mathematics and Physics.
             </p>
-            <p className="text-muted-foreground text-base mb-2">
-              Institution: Ibrahim Khan Government College, Tangail
-            </p>
-            <p className="text-muted-foreground text-base">Passed: 2019</p>
           </div>
-        </motion.div>
-      </div>
-    </motion.section>
+        </div>
+      </motion.div>
+
+      <motion.div variants={item}>
+        <h3 className="text-xl font-semibold mb-4">Certificates</h3>
+        <div className="space-y-4">
+          <div>
+            <h4 className="font-medium">Next Level Web Development</h4>
+            <div className="flex items-center gap-2">
+              <p className="text-sm text-muted-foreground">
+                Completed in 2025 -
+              </p>
+              <Link
+                href={
+                  "https://drive.google.com/file/d/13Ja9PnLEVCJqLJ7_0gqx_Ta0nG3NJvIM/view?usp=sharing"
+                }
+              >
+                <p className="text-sm text-blue-400">See...</p>
+              </Link>
+            </div>
+          </div>
+          <div>
+            <h4 className="font-medium">Complete Web Development</h4>
+            <div className="flex items-center gap-2">
+              <p className="text-sm text-muted-foreground">
+                Completed in 2024 -
+              </p>
+              <Link
+                href={
+                  "https://drive.google.com/file/d/1L9Unr6SSkArJldP-SUprEu1sVtgADdzx/view?usp=sharing"
+                }
+              >
+                <p className="text-sm text-blue-400">See...</p>
+              </Link>
+            </div>
+          </div>
+          <div>
+            <h4 className="font-medium">CSS</h4>
+            <div className="flex items-center gap-2">
+              <p className="text-sm text-muted-foreground">
+                Completed in 2023 -
+              </p>
+              <Link
+                href={
+                  "https://drive.google.com/file/d/1Quja4Bqk5Q3hSzfonhXP-DPbBL0tHge8/view?usp=sharing"
+                }
+              >
+                <p className="text-sm text-blue-400">See...</p>
+              </Link>
+            </div>
+          </div>
+          <div>
+            <h4 className="font-medium">HTML</h4>
+            <div className="flex items-center gap-2">
+              <p className="text-sm text-muted-foreground">
+                Completed in 2023 -
+              </p>
+              <Link
+                href={
+                  "https://drive.google.com/file/d/1E2Fdd7XOrynJH5r8XxgXFFGANU_i6TQd/view?usp=sharing"
+                }
+              >
+                <p className="text-sm text-blue-400">See...</p>
+              </Link>
+            </div>
+          </div>
+          <div>
+            <h4 className="font-medium">Database Programming</h4>
+            <div className="flex items-center gap-2">
+              <p className="text-sm text-muted-foreground">
+                Completed in 2017 -
+              </p>
+              <Link
+                href={
+                  "https://drive.google.com/file/d/1iM4K58y7QD_l639kGypxpPjpEFAhi9Mm/view?usp=sharing"
+                }
+              >
+                <p className="text-sm text-blue-400">See...</p>
+              </Link>
+            </div>
+          </div>
+        </div>
+      </motion.div>
+    </motion.div>
   );
 }

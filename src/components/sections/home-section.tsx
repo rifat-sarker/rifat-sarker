@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { Download } from "lucide-react";
+import Link from "next/link";
 
 export default function HomeSection() {
   const container = {
@@ -54,12 +55,23 @@ export default function HomeSection() {
           </p>
 
           <div className="flex flex-wrap gap-4 justify-center md:justify-start">
-            <Button size="lg" className="gap-2">
-              View Resume
-            </Button>
-            <Button size="lg" className="gap-2">
-              <Download size={18} /> Download CV
-            </Button>
+            <Link
+              target="_blank"
+              href={
+                "https://drive.google.com/file/d/1gd6ajoQ1TAKxvssMytv9l805lFHCI-cw/view?usp=drive_link"
+              }
+            >
+              {" "}
+              <Button size="lg" className="gap-2">
+                View Resume
+              </Button>
+            </Link>
+            <a href="/resume.pdf" download>
+              <Button size="lg" className="gap-2">
+                <Download size={18} /> Download CV
+              </Button>
+            </a>
+
             {/* <Button size="lg" variant="outline" className="gap-2" asChild>
               <a href="/projects">
                 My Work <ArrowRight size={18} />
