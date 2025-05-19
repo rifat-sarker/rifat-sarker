@@ -15,7 +15,6 @@ import { Button } from "@/components/ui/button";
 import {
   Home,
   User,
-  FileText,
   Briefcase,
   MessageSquare,
   Mail,
@@ -23,6 +22,8 @@ import {
   Linkedin,
   Facebook,
   Twitter,
+  UniversityIcon,
+  GraduationCap,
 } from "lucide-react";
 import Image from "next/image";
 import profileImg from "../../public/profile-img.jpg";
@@ -61,6 +62,18 @@ export function PortfolioSidebar() {
           </SidebarMenuItem>
 
           <SidebarMenuItem>
+            <SidebarMenuButton asChild isActive={pathname === "/education"}>
+              <Link
+                href="/education"
+                className="flex items-center gap-3 py-2 px-3 text-base"
+              >
+                <GraduationCap className="!h-5 !w-5" />
+                <span className="text-base">Education</span>
+              </Link>
+            </SidebarMenuButton>
+          </SidebarMenuItem>
+
+          <SidebarMenuItem>
             <SidebarMenuButton asChild isActive={pathname === "/about"}>
               <Link
                 href="/about"
@@ -68,18 +81,6 @@ export function PortfolioSidebar() {
               >
                 <User className="!h-5 !w-5" />
                 <span className="text-base">About</span>
-              </Link>
-            </SidebarMenuButton>
-          </SidebarMenuItem>
-
-          <SidebarMenuItem>
-            <SidebarMenuButton asChild isActive={pathname === "/resume"}>
-              <Link
-                href="/resume"
-                className="flex items-center gap-3 py-2 px-3 text-base"
-              >
-                <FileText className="!h-5 !w-5" />
-                <span className="text-base">Resume</span>
               </Link>
             </SidebarMenuButton>
           </SidebarMenuItem>

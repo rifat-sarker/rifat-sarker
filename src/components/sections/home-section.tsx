@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
-import { Download, ArrowRight } from "lucide-react";
+import { Download } from "lucide-react";
 
 export default function HomeSection() {
   const container = {
@@ -27,7 +27,7 @@ export default function HomeSection() {
       animate="show"
       className="space-y-8 w-full"
     >
-      <div className="flex flex-col md:flex-row gap-8 items-center">
+      <div className="flex flex-col md:flex-row gap-8 items-center ">
         <motion.div variants={item} className="w-full md:w-1/3">
           <div className="relative w-64 h-64 mx-auto">
             <div className="absolute inset-0 rounded-full bg-gradient-to-br from-primary to-primary-foreground opacity-20 blur-xl" />
@@ -55,13 +55,16 @@ export default function HomeSection() {
 
           <div className="flex flex-wrap gap-4 justify-center md:justify-start">
             <Button size="lg" className="gap-2">
+              View Resume
+            </Button>
+            <Button size="lg" className="gap-2">
               <Download size={18} /> Download CV
             </Button>
-            <Button size="lg" variant="outline" className="gap-2" asChild>
+            {/* <Button size="lg" variant="outline" className="gap-2" asChild>
               <a href="/projects">
                 My Work <ArrowRight size={18} />
               </a>
-            </Button>
+            </Button> */}
           </div>
         </motion.div>
       </div>

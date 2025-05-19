@@ -37,7 +37,7 @@ export default function AboutSection() {
           real-world problems.
         </p>
         <p className="text-muted-foreground mb-4">
-          My journey in web development began 4 years ago, and since then, I've
+          My journey in web development began 3 years ago, and since then, I've
           worked on a variety of projects ranging from e-commerce platforms to
           content management systems. I'm constantly learning and adapting to
           new technologies to stay at the forefront of web development.
@@ -52,7 +52,7 @@ export default function AboutSection() {
               <span className="font-medium">Name:</span> Rifat Sarker
             </p>
             <p>
-              <span className="font-medium">Age:</span> 26 Years
+              <span className="font-medium">Age:</span> 25 Years
             </p>
             <p>
               <span className="font-medium">Nationality:</span> Bangladeshi
@@ -66,15 +66,15 @@ export default function AboutSection() {
               <span className="font-medium">Address:</span> Dhaka, Bangladesh
             </p>
             <p>
-              <span className="font-medium">Phone:</span> +880 1234 567890
+              <span className="font-medium">Phone:</span> +880 1642550487
             </p>
             <p>
               <span className="font-medium">Email:</span>{" "}
-              rifat.sarker@example.com
+              rifatswd@gmail.com
             </p>
-            <p>
+            {/* <p>
               <span className="font-medium">Freelance:</span> Available
-            </p>
+            </p> */}
           </div>
         </div>
       </motion.div>
