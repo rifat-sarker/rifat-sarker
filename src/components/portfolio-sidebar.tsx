@@ -18,15 +18,14 @@ import {
   Briefcase,
   MessageSquare,
   Mail,
-  Github,
-  Linkedin,
-  Facebook,
-  Twitter,
-  UniversityIcon,
   GraduationCap,
+  Wrench,
+  X,
 } from "lucide-react";
 import Image from "next/image";
 import profileImg from "../../public/profile-img.jpg";
+import { FiFacebook, FiGithub } from "react-icons/fi";
+import { CiLinkedin } from "react-icons/ci";
 
 export function PortfolioSidebar() {
   const pathname = usePathname();
@@ -69,6 +68,18 @@ export function PortfolioSidebar() {
               >
                 <GraduationCap className="!h-5 !w-5" />
                 <span className="text-base">Education</span>
+              </Link>
+            </SidebarMenuButton>
+          </SidebarMenuItem>
+
+          <SidebarMenuItem>
+            <SidebarMenuButton asChild isActive={pathname === "/skills"}>
+              <Link
+                href="/skills"
+                className="flex items-center gap-3 py-2 px-3 text-base"
+              >
+                <Wrench className="!h-5 !w-5" />
+                <span className="text-base">Skills</span>
               </Link>
             </SidebarMenuButton>
           </SidebarMenuItem>
@@ -131,7 +142,7 @@ export function PortfolioSidebar() {
               target="_blank"
               rel="noopener noreferrer"
             >
-              <Github className="!h-5 !w-5" />
+              <FiGithub className="!h-5 !w-5" />
               <span className="sr-only">GitHub</span>
             </a>
           </Button>
@@ -141,7 +152,7 @@ export function PortfolioSidebar() {
               target="_blank"
               rel="noopener noreferrer"
             >
-              <Linkedin className="!h-5 !w-5" />
+              <CiLinkedin className="!h-5 !w-5" />
               <span className="sr-only">LinkedIn</span>
             </a>
           </Button>
@@ -151,7 +162,7 @@ export function PortfolioSidebar() {
               target="_blank"
               rel="noopener noreferrer"
             >
-              <Twitter className="!h-5 !w-5" />
+              <X className="!h-5 !w-5" />
               <span className="sr-only">Twitter</span>
             </a>
           </Button>
@@ -161,7 +172,7 @@ export function PortfolioSidebar() {
               target="_blank"
               rel="noopener noreferrer"
             >
-              <Facebook className="!h-5 !w-5" />
+              <FiFacebook className="!h-5 !w-5" />
               <span className="sr-only">Facebook</span>
             </a>
           </Button>
