@@ -15,20 +15,8 @@ import {
   BriefcaseBusiness,
   Sparkles,
 } from "lucide-react";
+import { Skill } from "@/types/skill";
 
-interface Skill {
-  id: string;
-  name: string;
-  category:
-    | "frontend"
-    | "backend"
-    | "database"
-    | "tools"
-    | "management"
-    | "teamleading";
-  icon: string;
-  description?: string;
-}
 
 interface SkillsSectionProps {
   skills: Skill[];
