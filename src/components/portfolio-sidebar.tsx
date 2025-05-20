@@ -47,7 +47,7 @@ export function PortfolioSidebar() {
         </Link>
       </SidebarHeader>
       <SidebarContent className="p-2 mx-auto">
-        <SidebarMenu className="space-y-2">
+        <SidebarMenu className="space-y-1">
           <SidebarMenuItem>
             <SidebarMenuButton asChild isActive={pathname === "/"}>
               <Link
