@@ -108,7 +108,7 @@ export function ContactSection() {
                 <div>
                   <h3 className="font-medium">Email</h3>
                   <p className="text-sm text-muted-foreground">
-                    rifat.sarker@example.com
+                    rifatswd@gmail.com
                   </p>
                 </div>
               </div>
@@ -124,7 +124,7 @@ export function ContactSection() {
                 <div>
                   <h3 className="font-medium">Phone</h3>
                   <p className="text-sm text-muted-foreground">
-                    +880 1234 567890
+                    +880 1642550487
                   </p>
                 </div>
               </div>

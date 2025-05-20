@@ -17,7 +17,6 @@ import {
 } from "lucide-react";
 import { Skill } from "@/types/skill";
 
-
 interface SkillsSectionProps {
   skills: Skill[];
 }
@@ -90,62 +89,63 @@ export function SkillsSection({ skills }: SkillsSectionProps) {
 
   return (
     <section className="w-full">
-      <div className="mx-auto max-w-7xl">
-        <div className="mb-12">
-          <h2 className="mb-4 text-3xl font-bold border-b-2 inline-block border-primary pb-2">
+      <div className="mx-auto">
+        {/* Section Heading */}
+        <div className="mb-8 sm:mb-12">
+          <h2 className="mb-4 text-2xl sm:text-3xl font-bold border-b-2 inline-block border-primary pb-2">
             Skills
           </h2>
-          <p className="max-w-[700px] text-gray-500 dark:text-gray-400">
+          <p className="max-w-[700px] text-sm sm:text-base text-gray-500 dark:text-gray-400">
             Expertise and technologies I work with
           </p>
         </div>
 
         {/* Category Filter Buttons */}
-        <div className="mb-12 overflow-hidden">
-          <div className="flex">
-            <div className="relative flex space-x-1 overflow-x-auto pb-4 sm:space-x-2">
+        <div className="mb-8 sm:mb-12">
+          <div className="flex flex-wrap justify-center gap-2 sm:gap-3 overflow-x-auto pb-2 scrollbar-thin scrollbar-thumb-gray-300 dark:scrollbar-thumb-gray-600">
+            <button
+              onClick={() => setActiveCategory(null)}
+              className={`flex-shrink-0 px-3 sm:px-4 py-2 rounded-lg text-xs sm:text-sm font-medium transition-all ${
+                activeCategory === null
+                  ? "bg-black text-white shadow dark:bg-white dark:text-black"
+                  : "bg-white text-gray-700 hover:bg-gray-100 dark:bg-gray-800 dark:text-gray-300 dark:hover:bg-gray-700"
+              }`}
+            >
+              All Skills
+            </button>
+
+            {Object.keys(categories).map((category) => (
               <button
-                onClick={() => setActiveCategory(null)}
-                className={`flex min-w-[100px] items-center justify-center rounded-lg px-4 py-2 text-sm font-medium transition-all ${
-                  activeCategory === null
-                    ? "bg-black text-white shadow-lg dark:bg-white dark:text-black"
+                key={category}
+                onClick={() => handleCategoryClick(category)}
+                className={`flex-shrink-0 relative px-3 sm:px-4 py-2 rounded-lg text-xs sm:text-sm font-medium transition-all overflow-hidden ${
+                  activeCategory === category
+                    ? "text-white shadow"
                     : "bg-white text-gray-700 hover:bg-gray-100 dark:bg-gray-800 dark:text-gray-300 dark:hover:bg-gray-700"
                 }`}
               >
-                All Skills
-              </button>
-
-              {Object.keys(categories).map((category) => (
-                <button
-                  key={category}
-                  onClick={() => handleCategoryClick(category)}
-                  className={`group relative flex min-w-[100px] items-center justify-center overflow-hidden rounded-lg px-4 py-2 text-sm font-medium transition-all ${
-                    activeCategory === category
-                      ? "text-white shadow-lg"
-                      : "bg-white text-gray-700 hover:bg-gray-100 dark:bg-gray-800 dark:text-gray-300 dark:hover:bg-gray-700"
-                  }`}
-                >
-                  {activeCategory === category && (
-                    <div
-                      className={`absolute inset-0 ${getCategoryColorClass(
-                        category
-                      )}`}
-                    ></div>
-                  )}
-                  <span className="relative flex items-center">
-                    <span className="mr-2">
-                      {getIconComponent(categories[category][0].icon)}
-                    </span>
-                    {getCategoryName(category)}
+                {activeCategory === category && (
+                  <div
+                    className={`absolute inset-0 ${getCategoryColorClass(
+                      category
+                    )}`}
+                  ></div>
+                )}
+                <span className="relative flex items-center">
+                  <span className="mr-2">
+                    {getIconComponent(
+                      categories[category][0].icon ?? "sparkles"
+                    )}
                   </span>
-                </button>
-              ))}
-            </div>
+                  {getCategoryName(category)}
+                </span>
+              </button>
+            ))}
           </div>
         </div>
 
         {/* Skill Cards */}
-        <div className="grid grid-cols-2 gap-6 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5">
+        <div className="grid grid-cols-1 xs:grid-cols-2 sm:grid-cols-3 md:grid-cols-4 xl:grid-cols-5 gap-4 sm:gap-6">
           {skills
             .filter((skill) => isSkillVisible(skill))
             .map((skill) => (
@@ -160,31 +160,31 @@ export function SkillsSection({ skills }: SkillsSectionProps) {
                 transition={{ duration: 0.3 }}
                 onMouseEnter={() => setHoveredSkill(skill.id)}
                 onMouseLeave={() => setHoveredSkill(null)}
-                className={`group relative flex flex-col items-center overflow-hidden rounded-xl border border-gray-200 bg-white p-6 text-center transition-all duration-300 dark:border-gray-700 dark:bg-gray-800 ${
+                className={`group relative w-full flex flex-col items-center overflow-hidden rounded-xl border border-gray-200 bg-white p-4 sm:p-6 text-center transition-all duration-300 dark:border-gray-700 dark:bg-gray-800 ${
                   isSkillVisible(skill)
                     ? "hover:shadow-lg hover:-translate-y-1"
                     : "pointer-events-none"
                 }`}
               >
                 <div
-                  className={`absolute -right-12 -top-12 h-24 w-24 rotate-45 transform opacity-10 transition-opacity ${getCategoryColorClass(
+                  className={`absolute -right-12 -top-12 h-24 w-24 rotate-45 transform transition-opacity ${getCategoryColorClass(
                     skill.category
                   )} ${
                     hoveredSkill === skill.id ? "opacity-20" : "opacity-10"
                   }`}
                 ></div>
                 <div
-                  className={`relative mb-4 flex h-16 w-16 items-center justify-center rounded-full p-3 text-white shadow-md ${getCategoryColorClass(
+                  className={`relative mb-3 sm:mb-4 flex h-12 sm:h-16 w-12 sm:w-16 items-center justify-center rounded-full p-2 sm:p-3 text-white shadow-md ${getCategoryColorClass(
                     skill.category
                   )}`}
                 >
-                  {getIconComponent(skill.icon)}
+                  {getIconComponent(skill.icon ?? "sparkles")}
                 </div>
-                <h4 className="mb-2 text-lg font-medium text-gray-800 dark:text-gray-100">
+                <h4 className="mb-2 text-base sm:text-lg font-medium text-gray-800 dark:text-gray-100">
                   {skill.name}
                 </h4>
                 {skill.description && (
-                  <p className="text-sm text-gray-500 dark:text-gray-400">
+                  <p className="text-xs sm:text-sm text-gray-500 dark:text-gray-400">
                     {skill.description}
                   </p>
                 )}
