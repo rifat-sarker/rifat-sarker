@@ -8,92 +8,15 @@ import { Tabs, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { ExternalLink } from "lucide-react";
 import Image from "next/image";
 import { FiGithub } from "react-icons/fi";
+import { Project } from "@/types/project";
 
-// Static data
-const projectsData = [
-  {
-    id: 1,
-    title: "Cyclify",
-    category: "fullstack",
-    image: "/image.jpg",
-    technologies: ["React", "Node.js", "Express", "MongoDB"],
-    description:
-      "A dynamic and user-friendly bicycle e-commerce platform with real-time inventory management, user authentication, and payment processing.",
-    clientUrl: "https://github.com/yourusername/cyclify",
-    serverUrl: "https://github.com/yourusername/cyclify",
-    liveUrl: "https://cyclify-demo.vercel.app",
-  },
-  {
-    id: 2,
-    title: "Mixhub Blog",
-    category: "fullstack",
-    image: "/image.jpg",
-    technologies: [
-      "Next.js",
-      "TypeScript",
-      "Tailwind CSS",
-      "Prisma",
-      "PostgreSQL",
-    ],
-    description:
-      "A digital platform that hosts a collection of articles, posts, and entries with a modern UI, comment system, and content management.",
-    clientUrl: "https://github.com/yourusername/cyclify",
-    serverUrl: "https://github.com/yourusername/cyclify",
-    liveUrl: "https://mixhub-blog.vercel.app",
-  },
-  {
-    id: 3,
-    title: "Tech Radar",
-    category: "frontend",
-    image: "/image.jpg",
-    technologies: ["React", "Material UI", "Redux", "Firebase"],
-    description:
-      "Dive into detailed insights on smartphones, laptops, and more from top tech companies with advanced filtering and comparison tools.",
-    clientUrl: "https://github.com/yourusername/cyclify",
-    serverUrl: "https://github.com/yourusername/cyclify",
-    liveUrl: "https://tech-radar-demo.vercel.app",
-  },
-  {
-    id: 4,
-    title: "Task Manager API",
-    category: "backend",
-    image: "/image.jpg",
-    technologies: ["Node.js", "Express", "MongoDB", "JWT", "Jest"],
-    description:
-      "A comprehensive RESTful API for task management with authentication, authorization, and data persistence.",
-    clientUrl: "https://github.com/yourusername/cyclify",
-    serverUrl: "https://github.com/yourusername/cyclify",
-    liveUrl: "https://task-manager-api-docs.vercel.app",
-  },
-  {
-    id: 5,
-    title: "Weather Dashboard",
-    category: "frontend",
-    image: "/image.jpg",
-    technologies: ["React", "TypeScript", "Chart.js", "OpenWeatherMap API"],
-    description:
-      "Real-time weather information with interactive maps, forecasts, and historical data visualization.",
-    clientUrl: "https://github.com/yourusername/cyclify",
-    serverUrl: "https://github.com/yourusername/cyclify",
-    liveUrl: "https://weather-dashboard-demo.vercel.app",
-  },
-  {
-    id: 6,
-    title: "E-Learning Platform",
-    category: "fullstack",
-    image: "/image.jpg",
-    technologies: ["Next.js", "Node.js", "PostgreSQL", "Prisma", "AWS S3"],
-    description:
-      "A full-stack e-learning platform with course management, student progress tracking, and interactive lessons.",
-    clientUrl: "https://github.com/yourusername/cyclify",
-    serverUrl: "https://github.com/yourusername/cyclify",
-    liveUrl: "https://e-learning-platform-demo.vercel.app",
-  },
-];
+type Props = {
+  projectsData: Project[];
+};
 
-export function ProjectsSection() {
+export function ProjectsSection({ projectsData }: Props) {
   const [filter, setFilter] = useState("all");
-  const [selectedProject, setSelectedProject] = useState<number | null>(null);
+  const [selectedProject, setSelectedProject] = useState<string | null>(null);
 
   const container = {
     hidden: { opacity: 0 },
@@ -162,8 +85,8 @@ export function ProjectsSection() {
             >
               <div className="relative aspect-[4/3] w-full overflow-hidden">
                 <Image
-                  src={project.image}
-                  alt={project.title}
+                  src={project.image || "/placeholder.jpg"}
+                  alt={project.name}
                   fill
                   className="object-cover group-hover:scale-105 transition-transform duration-500"
                 />
@@ -171,7 +94,7 @@ export function ProjectsSection() {
 
               <div className="p-4 flex flex-col gap-2">
                 <h3 className="text-lg font-semibold tracking-tight">
-                  {project.title}
+                  {project.name}
                 </h3>
                 <p className="text-sm text-muted-foreground line-clamp-3">
                   {project.description}
@@ -221,7 +144,7 @@ export function ProjectsSection() {
             >
               {(() => {
                 const project = projectsData.find(
-                  (p) => p.id === selectedProject
+                  (p) => p.id === String(selectedProject)
                 );
                 if (!project) return null;
 
@@ -229,7 +152,7 @@ export function ProjectsSection() {
                   <>
                     <div className="mb-6">
                       <h3 className="text-2xl font-bold mb-2">
-                        {project.title}
+                        {project.name}
                       </h3>
                       <div className="flex flex-wrap gap-2 mb-4">
                         {project.technologies.map((tech) => (
@@ -242,8 +165,8 @@ export function ProjectsSection() {
 
                     <div className="mb-6">
                       <Image
-                        src={project.image}
-                        alt={project.title}
+                        src={project.image || "/placeholder.jpg"}
+                        alt={project.name}
                         height={300}
                         width={300}
                         className="w-full h-auto rounded-lg mb-4"

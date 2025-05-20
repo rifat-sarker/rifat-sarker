@@ -1,10 +1,12 @@
 import { ProjectsSection } from "@/components/sections/projects-section";
 import { PortfolioLayout } from "@/layout/portfolio-layout";
+import { getProjects } from "@/service";
 
-export default function ProjectsPage() {
+export default async function ProjectsPage() {
+  const { data: projectsData } = await getProjects();
   return (
     <PortfolioLayout>
-      <ProjectsSection />
+      <ProjectsSection projectsData={projectsData} />
     </PortfolioLayout>
   );
 }
