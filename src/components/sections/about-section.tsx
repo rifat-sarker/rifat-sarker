@@ -37,9 +37,9 @@ export default function AboutSection() {
           real-world problems.
         </p>
         <p className="text-muted-foreground mb-4">
-          My journey in web development began 3 years ago, and since then, I've
+          My journey in web development began 3 years ago, and since then, I have
           worked on a variety of projects ranging from e-commerce platforms to
-          content management systems. I'm constantly learning and adapting to
+          content management systems. I am constantly learning and adapting to
           new technologies to stay at the forefront of web development.
         </p>
       </motion.div>

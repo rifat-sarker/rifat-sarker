@@ -1,4 +1,4 @@
-import { User } from "./user";
+// import { User } from "./user";
 
 export type BlogCategory =
   | "javascript"
@@ -20,9 +20,8 @@ export interface Blog {
   content: string;
   image?: string;
   category: BlogCategory;
-  authorId: string;
-  author: User;
   publishedAt: string;
   createdAt: string;
   updatedAt: string;
+  tags?: string[];
 }

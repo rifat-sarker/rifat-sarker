@@ -2,18 +2,14 @@
 
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
-import {
-  Card,
-  CardFooter,
-  CardHeader,
-  CardTitle,
-} from "@/components/ui/card";
+import { Card, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Calendar, BookOpen } from "lucide-react";
 import { toast } from "sonner";
 import Image from "next/image";
 import { Blog } from "@/types/blog";
+import Link from "next/link";
 
 type Props = {
   blogsData: Blog[];
@@ -103,14 +99,16 @@ export function BlogSection({ blogsData }: Props) {
                 </p>
               </CardContent> */}
               <CardFooter className="pt-0">
-                <Button
-                  variant="ghost"
-                  size="sm"
-                  className="gap-1 p-0 my-2 py-2 h-auto font-medium text-primary hover:text-primary/80 hover:bg-transparent"
-                >
-                  Read Article{" "}
-                  <ArrowRight className="h-3.5 w-3.5 ml-1 transition-transform group-hover:translate-x-1" />
-                </Button>
+                <Link href={`/blogs/${blog.id}`}>
+                  <Button
+                    variant="ghost"
+                    size="sm"
+                    className="gap-1 p-0 my-2 py-2 h-auto font-medium text-primary hover:text-primary/80 hover:bg-transparent"
+                  >
+                    Read Blog{" "}
+                    <ArrowRight className="h-3.5 w-3.5 ml-1 transition-transform group-hover:translate-x-1" />
+                  </Button>
+                </Link>
               </CardFooter>
             </Card>
           ))}
@@ -120,7 +118,7 @@ export function BlogSection({ blogsData }: Props) {
       <motion.div variants={item} className="flex justify-center mt-12">
         <Button className="gap-2">
           <BookOpen className="h-4 w-4" />
-          View All Articles
+          View All Blogs
         </Button>
       </motion.div>
     </motion.div>
