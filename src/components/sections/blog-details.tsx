@@ -7,6 +7,7 @@ import Image from "next/image";
 import { useRouter, useParams } from "next/navigation";
 import { useEffect, useState } from "react";
 import { Blog } from "@/types/blog";
+import GlobalLoader from "../global-loader";
 
 export default function BlogDetails() {
   const router = useRouter();
@@ -44,13 +45,7 @@ export default function BlogDetails() {
     fetchBlog();
   }, [id]);
 
-  if (loading) {
-    return (
-      <div className="flex justify-center items-center h-screen">
-        <p>Loading blog...</p>
-      </div>
-    );
-  }
+  if (loading) return <GlobalLoader />;
 
   if (error) {
     return (

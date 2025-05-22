@@ -40,7 +40,7 @@ export function PortfolioSidebar() {
               src={profileImg}
               alt="profile-image"
             />
-            <h1 className="absolute bottom-0 py-2 text-center bg-[#00A3E1] opacity-80 w-full text-white text-lg font-semibold">
+            <h1 className="absolute bottom-0 py-2 text-center bg-cyan-900 opacity-80 w-full text-white text-lg font-semibold">
               RIFAT SARKER
             </h1>
           </div>
