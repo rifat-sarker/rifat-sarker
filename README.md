@@ -63,39 +63,54 @@
 
 <div align="center">
 
-  <table>
-    <tr>
-      <td align="center" width="250">
+<table>
+  <tr>
+    <td align="center" width="300">
+      <a href="https://tech-radar.vercel.app" target="_blank">
         <img src="https://img.shields.io/badge/Tech Radar-Explorer-0D1117?style=for-the-badge&logo=googlechrome&logoColor=white" />
-        <br/>
-        <sub><strong>A tech product explorer</strong></sub>
-      </td>
-      <td align="center" width="250">
-        <img src="https://img.shields.io/badge/MixHub Blog-Multicategory Blog-0D1117?style=for-the-badge&logo=hashnode&logoColor=white" />
-        <br/>
-        <sub><strong>Blog with wishlist & sharing</strong></sub>
-      </td>
-    </tr>
-    <tr>
-      <td align="center" width="250">
+      </a>
+      <br />
+      <sub><strong>A tech product explorer</strong></sub><br />
+      🔗 <a href="https://tech-radar.vercel.app" target="_blank">Live</a> | 💻 <a href="https://github.com/rifat-sarker/tech-radar" target="_blank">Code</a>
+    </td>
+    <td align="center" width="300">
+      <a href="https://mixhub-blog.vercel.app" target="_blank">
+        <img src="https://img.shields.io/badge/MixHub Blog-Multi Blog-0D1117?style=for-the-badge&logo=hashnode&logoColor=white" />
+      </a>
+      <br />
+      <sub><strong>Multi-category blog with wishlist & sharing</strong></sub><br />
+      🔗 <a href="https://mixhub-blog.vercel.app" target="_blank">Live</a> | 💻 <a href="https://github.com/rifat-sarker/mixhub-blog" target="_blank">Code</a>
+    </td>
+  </tr>
+  <tr>
+    <td align="center" width="300">
+      <a href="https://cyclify.vercel.app" target="_blank">
         <img src="https://img.shields.io/badge/Cyclify-Bicycle Shop-0D1117?style=for-the-badge&logo=paypal&logoColor=white" />
-        <br/>
-        <sub><strong>eCommerce with role-based dashboard</strong></sub>
-      </td>
-      <td align="center" width="250">
-        <img src="https://img.shields.io/badge/MediStore-Pharmacy App-0D1117?style=for-the-badge&logo=googlepay&logoColor=white" />
-        <br/>
-        <sub><strong>Medicine store with payment integration</strong></sub>
-      </td>
-    </tr>
-    <tr>
-      <td align="center" colspan="2">
+      </a>
+      <br />
+      <sub><strong>eCommerce site with admin & customer dashboards</strong></sub><br />
+      🔗 <a href="https://cyclify.vercel.app" target="_blank">Live</a> | 💻 <a href="https://github.com/rifat-sarker/cyclify" target="_blank">Code</a>
+    </td>
+    <td align="center" width="300">
+      <a href="https://medistore.vercel.app" target="_blank">
+        <img src="https://img.shields.io/badge/MediStore-Medicine Shop-0D1117?style=for-the-badge&logo=googlepay&logoColor=white" />
+      </a>
+      <br />
+      <sub><strong>Online pharmacy store with payment integration</strong></sub><br />
+      🔗 <a href="https://medistore.vercel.app" target="_blank">Live</a> | 💻 <a href="https://github.com/rifat-sarker/medistore" target="_blank">Code</a>
+    </td>
+  </tr>
+  <tr>
+    <td align="center" colspan="2">
+      <a href="https://event-planner.vercel.app" target="_blank">
         <img src="https://img.shields.io/badge/Event Planner-Event System-0D1117?style=for-the-badge&logo=googlecalendar&logoColor=white" />
-        <br/>
-        <sub><strong>Event creation, filters, participants, admin features</strong></sub>
-      </td>
-    </tr>
-  </table>
+      </a>
+      <br />
+      <sub><strong>Event creation, filters, participants, admin features</strong></sub><br />
+      🔗 <a href="https://event-planner.vercel.app" target="_blank">Live</a> | 💻 <a href="https://github.com/rifat-sarker/event-planner" target="_blank">Code</a>
+    </td>
+  </tr>
+</table>
 
 </div>
 
