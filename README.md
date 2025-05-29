@@ -5,7 +5,7 @@
 
 ---
 
-![Banner](https://res.cloudinary.com/dunfiptfi/image/upload/v1748499223/YouTube_Banner_-_Rifat_Sarker_Web_Developer_q1qi7d.png)
+![Banner](https://res.cloudinary.com/dunfiptfi/image/upload/v1748499664/YouTube_Banner_-_Rifat_Sarker_Web_Developer_rv4tsg.gif)
 
 
 ## 🚀 Tech Stack
