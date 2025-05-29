@@ -7,6 +7,32 @@
 
 ![Banner](https://res.cloudinary.com/dunfiptfi/image/upload/v1748499664/YouTube_Banner_-_Rifat_Sarker_Web_Developer_rv4tsg.gif)
 
+---
+## 📈 Current Stats
+<p align="center">
+  <img src="https://github-readme-streak-stats.herokuapp.com?user=rifat-sarker&theme=react&hide_border=true&background=0D1117&stroke=0D1117&fire=FF1CF7&sideLabels=00F0FF&currStreakNum=FF1CF7&ring=FF1CF7&currStreakLabel=FF1CF7&sideNums=00F0FF" height="200"/>
+  <img src="https://github-readme-stats.vercel.app/api?username=rifat-sarker&show_icons=true&theme=radical" height="200"/>
+</p>
+
+---
+## 🌐 Connect With Me
+
+<p align="left">
+  <a href="https://www.linkedin.com/in/rifat-sarker" target="_blank">
+    <img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" />
+  </a>
+  <a href="https://github.com/rifat-sarker" target="_blank">
+    <img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white" />
+  </a>
+  <a href="mailto:rifatswd@gmail.com">
+    <img src="https://img.shields.io/badge/Gmail-EA4335?style=for-the-badge&logo=gmail&logoColor=white" />
+  </a>
+  <a href="https://twitter.com/rifatswd" target="_blank">
+    <img src="https://img.shields.io/badge/Twitter-1DA1F2?style=for-the-badge&logo=twitter&logoColor=white" />
+  </a>
+</p>
+
+----
 
 ## 🚀 Tech Stack
 
@@ -61,31 +87,5 @@
   </tr>
 </table>
 
----
-
-## 🌐 Connect With Me
-
-<p align="left">
-  <a href="https://www.linkedin.com/in/rifat-sarker" target="_blank">
-    <img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" />
-  </a>
-  <a href="https://github.com/rifat-sarker" target="_blank">
-    <img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white" />
-  </a>
-  <a href="mailto:rifatswd@gmail.com">
-    <img src="https://img.shields.io/badge/Gmail-EA4335?style=for-the-badge&logo=gmail&logoColor=white" />
-  </a>
-  <a href="https://twitter.com/rifatswd" target="_blank">
-    <img src="https://img.shields.io/badge/Twitter-1DA1F2?style=for-the-badge&logo=twitter&logoColor=white" />
-  </a>
-</p>
-
-
----
-## 📈 Current Stats
-<p align="center">
-  <img src="https://github-readme-streak-stats.herokuapp.com?user=rifat-sarker&theme=react&hide_border=true&background=0D1117&stroke=0D1117&fire=FF1CF7&sideLabels=00F0FF&currStreakNum=FF1CF7&ring=FF1CF7&currStreakLabel=FF1CF7&sideNums=00F0FF" height="200"/>
-  <img src="https://github-readme-stats.vercel.app/api?username=rifat-sarker&show_icons=true&theme=radical" height="200"/>
-</p>
 
 
