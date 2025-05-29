@@ -59,14 +59,46 @@
 </table>
 
 ---
-
 ## 📌 Projects
 
-- 🔹 **Tech Radar** – A tech product explorer  
-- 🔹 **MixHub Blog** – Multi-category blog with social sharing  
-- 🔹 **Cyclify** – Bicycle eCommerce with role-based dashboard  
-- 🔹 **MediStore** – Online medicine store with payments  
-- 🔹 **Event Planner** – Event system with participation, filters & admin
+<div align="center">
+
+  <table>
+    <tr>
+      <td align="center" width="250">
+        <img src="https://img.shields.io/badge/Tech Radar-Explorer-0D1117?style=for-the-badge&logo=googlechrome&logoColor=white" />
+        <br/>
+        <sub><strong>A tech product explorer</strong></sub>
+      </td>
+      <td align="center" width="250">
+        <img src="https://img.shields.io/badge/MixHub Blog-Multicategory Blog-0D1117?style=for-the-badge&logo=hashnode&logoColor=white" />
+        <br/>
+        <sub><strong>Blog with wishlist & sharing</strong></sub>
+      </td>
+    </tr>
+    <tr>
+      <td align="center" width="250">
+        <img src="https://img.shields.io/badge/Cyclify-Bicycle Shop-0D1117?style=for-the-badge&logo=paypal&logoColor=white" />
+        <br/>
+        <sub><strong>eCommerce with role-based dashboard</strong></sub>
+      </td>
+      <td align="center" width="250">
+        <img src="https://img.shields.io/badge/MediStore-Pharmacy App-0D1117?style=for-the-badge&logo=googlepay&logoColor=white" />
+        <br/>
+        <sub><strong>Medicine store with payment integration</strong></sub>
+      </td>
+    </tr>
+    <tr>
+      <td align="center" colspan="2">
+        <img src="https://img.shields.io/badge/Event Planner-Event System-0D1117?style=for-the-badge&logo=googlecalendar&logoColor=white" />
+        <br/>
+        <sub><strong>Event creation, filters, participants, admin features</strong></sub>
+      </td>
+    </tr>
+  </table>
+
+</div>
+
 
 ---
 
