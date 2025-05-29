@@ -79,24 +79,14 @@
   <a href="https://github.com/rifat-sarker" target="_blank">
     <img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white" />
   </a>
-  <a href="mailto:youremail@example.com">
+  <a href="mailto:rifatswd@gmail.com">
     <img src="https://img.shields.io/badge/Gmail-EA4335?style=for-the-badge&logo=gmail&logoColor=white" />
   </a>
-  <a href="https://twitter.com/yourhandle" target="_blank">
+  <a href="https://twitter.com/rifatswd" target="_blank">
     <img src="https://img.shields.io/badge/Twitter-1DA1F2?style=for-the-badge&logo=twitter&logoColor=white" />
   </a>
 </p>
 
-
-➡️ View all at: [Portfolio Website](https://rifatsarker.com)
-
----
-
-## 📫 Let's Connect
-
-- 🌐 Website: [rifat-sarker.github.io](https://rifat-sarker)  
-- 💼 LinkedIn: [linkedin.com/in/rifat-sarker](https://linkedin.com/in/rifaswd)  
-- ✉️ Email: [rifatswd@gmail.com]
 
 ---
 ## 📈 Current Stats
