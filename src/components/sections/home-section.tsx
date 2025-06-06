@@ -119,7 +119,7 @@ export default function HomeSection() {
           </h3>
           <p className="text-muted-foreground">
             As a passionate developer, I love solving real-world problems with
-            clean code, efficient design, and meaningful UX. Whether it's a
+            clean code, efficient design, and meaningful UX. Whether it is a
             sleek frontend or a robust backend, I focus on clarity, performance,
             and impact.
           </p>
@@ -132,7 +132,7 @@ export default function HomeSection() {
           </p>
           <Link href="/contact">
             <Button size="lg" className="mt-4">
-              Let's Connect
+              Let us Connect
             </Button>
           </Link>
         </motion.div>
