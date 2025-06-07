@@ -39,7 +39,9 @@ export function EducationSection() {
                 <h4 className="text-lg font-medium">
                   Bachelor of Science in Physics
                 </h4>
-                <p className="text-muted-foreground">National University</p>
+                <p className="text-muted-foreground text-sm">
+                  National University
+                </p>
               </div>
               <p className="text-sm text-muted-foreground mt-2">
                 3rd year(almost completed)
@@ -53,7 +55,7 @@ export function EducationSection() {
                 <h4 className="text-lg font-medium">
                   Higher Secondary Certificate
                 </h4>
-                <p className="text-muted-foreground">
+                <p className="text-muted-foreground text-sm">
                   Ibrahim Khan Government College
                 </p>
               </div>
@@ -68,7 +70,9 @@ export function EducationSection() {
                 <h4 className="text-lg font-medium">
                   Next Level Web Development Course
                 </h4>
-                <p className="text-muted-foreground">Programming Hero</p>
+                <p className="text-muted-foreground text-sm">
+                  Programming Hero
+                </p>
               </div>
               <p className="text-sm text-muted-foreground mt-2">
                 <Link
@@ -88,13 +92,15 @@ export function EducationSection() {
                 <h4 className="text-lg font-medium">
                   Complete Web Development Course
                 </h4>
-                <p className="text-muted-foreground">Programming Hero</p>
+                <p className="text-muted-foreground text-sm">
+                  Programming Hero
+                </p>
               </div>
               <p className="text-sm text-muted-foreground mt-2">
                 <Link
                   target="_blank"
                   href={
-                    "https://drive.google.com/file/d/13Ja9PnLEVCJqLJ7_0gqx_Ta0nG3NJvIM/view?usp=sharing"
+                    "https://drive.google.com/file/d/1L9Unr6SSkArJldP-SUprEu1sVtgADdzx/view?usp=drive_link"
                   }
                 >
                   <p className="text-sm text-blue-400">Certificate...</p>
@@ -106,7 +112,7 @@ export function EducationSection() {
               <div className="mb-1">
                 <Badge className="mb-2">2023</Badge>
                 <h4 className="text-lg font-medium">CSS</h4>
-                <p className="text-muted-foreground">Sololearn</p>
+                <p className="text-muted-foreground text-sm">Sololearn</p>
               </div>
               <p className="text-sm text-muted-foreground mt-2">
                 <Link
@@ -124,7 +130,7 @@ export function EducationSection() {
               <div className="mb-1">
                 <Badge className="mb-2">2023</Badge>
                 <h4 className="text-lg font-medium">HTML</h4>
-                <p className="text-muted-foreground">Sololearn</p>
+                <p className="text-muted-foreground text-sm">Sololearn</p>
               </div>
               <p className="text-sm text-muted-foreground mt-2">
                 <Link
@@ -142,7 +148,7 @@ export function EducationSection() {
               <div className="mb-1">
                 <Badge className="mb-2">2017</Badge>
                 <h4 className="text-lg font-medium">Database Programming</h4>
-                <p className="text-muted-foreground">
+                <p className="text-muted-foreground text-sm">
                   Alif Computer Technical Institute, Tangail
                 </p>
               </div>

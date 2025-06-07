@@ -72,21 +72,6 @@ export function SkillsSection({ skills }: SkillsSectionProps) {
     return !activeCategory || skill.category === activeCategory;
   };
 
-  const getCategoryColorClass = (category: string) => {
-    const colors = {
-      frontend: "bg-gradient-to-br from-blue-500 to-cyan-400",
-      backend: "bg-gradient-to-br from-green-500 to-emerald-400",
-      database: "bg-gradient-to-br from-purple-500 to-violet-400",
-      tools: "bg-gradient-to-br from-orange-500 to-amber-400",
-      management: "bg-gradient-to-br from-rose-500 to-pink-400",
-      teamleading: "bg-gradient-to-br from-indigo-500 to-blue-400",
-    };
-    return (
-      colors[category as keyof typeof colors] ||
-      "bg-gradient-to-br from-gray-500 to-gray-400"
-    );
-  };
-
   return (
     <motion.div
       initial={{ opacity: 0, rotateX: -90, transformOrigin: "left center" }}
@@ -117,10 +102,10 @@ export function SkillsSection({ skills }: SkillsSectionProps) {
             <div className="flex flex-wrap justify-center gap-2 sm:gap-3 overflow-x-auto pb-2 scrollbar-thin scrollbar-thumb-gray-300 dark:scrollbar-thumb-gray-600">
               <button
                 onClick={() => setActiveCategory(null)}
-                className={`flex-shrink-0 px-3 sm:px-4 py-2 rounded-lg text-xs sm:text-sm font-medium transition-all ${
+                className={`btn btn-black flex-shrink-0 px-3 sm:px-4 py-2 rounded-lg text-xs sm:text-sm font-medium transition-all ${
                   activeCategory === null
-                    ? "bg-black text-white shadow dark:bg-white dark:text-black"
-                    : "bg-white text-gray-700 hover:bg-gray-100 dark:bg-gray-800 dark:text-gray-300 dark:hover:bg-gray-700"
+                    ? "bg-black text-white hover:bg-gray-800 dark:bg-white dark:text-black dark:hover:bg-gray-200"
+                    : ""
                 }`}
               >
                 All Skills
@@ -130,18 +115,14 @@ export function SkillsSection({ skills }: SkillsSectionProps) {
                 <button
                   key={category}
                   onClick={() => handleCategoryClick(category)}
-                  className={`flex-shrink-0 relative px-3 sm:px-4 py-2 rounded-lg text-xs sm:text-sm font-medium transition-all overflow-hidden ${
+                  className={`btn btn-black flex-shrink-0 relative px-3 sm:px-4 py-2 rounded-lg text-xs sm:text-sm font-medium transition-all overflow-hidden ${
                     activeCategory === category
-                      ? "text-white shadow"
-                      : "bg-white text-gray-700 hover:bg-gray-100 dark:bg-gray-800 dark:text-gray-300 dark:hover:bg-gray-700"
+                      ? "bg-black text-white hover:bg-gray-800 dark:bg-white dark:text-black dark:hover:bg-gray-200"
+                      : ""
                   }`}
                 >
                   {activeCategory === category && (
-                    <div
-                      className={`absolute inset-0 ${getCategoryColorClass(
-                        category
-                      )}`}
-                    ></div>
+                    <div className={`absolute inset-0`}></div>
                   )}
                   <span className="relative flex items-center">
                     <span className="mr-2">
@@ -172,27 +153,23 @@ export function SkillsSection({ skills }: SkillsSectionProps) {
                   transition={{ duration: 0.3 }}
                   onMouseEnter={() => setHoveredSkill(skill.id)}
                   onMouseLeave={() => setHoveredSkill(null)}
-                  className={`group relative w-full flex flex-col items-center overflow-hidden rounded-xl border border-gray-200 bg-white p-4 sm:p-6 text-center transition-all duration-300 dark:border-gray-700 dark:bg-gray-800 ${
+                  className={`group relative w-full flex flex-col items-center overflow-hidden rounded-xl border  p-4 sm:p-6 text-center transition-all duration-300   ${
                     isSkillVisible(skill)
                       ? "hover:shadow-lg hover:-translate-y-1"
                       : "pointer-events-none"
                   }`}
                 >
                   <div
-                    className={`absolute -right-12 -top-12 h-24 w-24 rotate-45 transform transition-opacity ${getCategoryColorClass(
-                      skill.category
-                    )} ${
+                    className={`absolute -right-12 -top-12 h-24 w-24 rotate-45 transform transition-opacity ${
                       hoveredSkill === skill.id ? "opacity-20" : "opacity-10"
                     }`}
                   ></div>
                   <div
-                    className={`relative mb-3 sm:mb-4 flex h-12 sm:h-16 w-12 sm:w-16 items-center justify-center rounded-full p-2 sm:p-3 text-white shadow-md ${getCategoryColorClass(
-                      skill.category
-                    )}`}
+                    className={`relative mb-3 sm:mb-4 flex h-12 sm:h-16 w-12 sm:w-16 items-center justify-center rounded-full p-2 sm:p-3  shadow-md `}
                   >
                     {getIconComponent(skill.icon ?? "sparkles")}
                   </div>
-                  <h4 className="mb-2 text-base sm:text-lg font-medium text-gray-800 dark:text-gray-100">
+                  <h4 className="mb-2 text-base sm:text-lg font-medium ">
                     {skill.name}
                   </h4>
                   {skill.description && (

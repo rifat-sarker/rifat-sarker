@@ -4,7 +4,6 @@ import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
-import { Tabs, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { ExternalLink } from "lucide-react";
 import Image from "next/image";
 import { FiGithub } from "react-icons/fi";
@@ -15,19 +14,29 @@ type Props = {
 };
 
 export function ProjectsSection({ projectsData }: Props) {
-  const [filter, setFilter] = useState("all");
+  const [filter, setFilter] = useState<string | null>("all"); // null means no filter (= all)
   const [selectedProject, setSelectedProject] = useState<string | null>(null);
 
+  const categories = ["all", "frontend", "backend", "fullstack"];
+
+  // Toggle filter on click, same as SkillsSection category toggle
+  function handleFilterClick(category: string) {
+    if (filter === category) {
+      setFilter(null); // reset to "all" (no filter)
+    } else {
+      setFilter(category);
+    }
+  }
+
+  const filteredProjects =
+    !filter || filter === "all"
+      ? projectsData
+      : projectsData.filter((project) => project.category === filter);
 
   const item = {
     hidden: { opacity: 0, y: 20 },
     show: { opacity: 1, y: 0 },
   };
-
-  const filteredProjects =
-    filter === "all"
-      ? projectsData
-      : projectsData.filter((project) => project.category === filter);
 
   return (
     <motion.div
@@ -40,24 +49,27 @@ export function ProjectsSection({ projectsData }: Props) {
     >
       <motion.div variants={item}>
         <h2 className="text-3xl font-bold mb-6 inline-block border-b-2 border-primary pb-2">
-          My Projects
+          Projects
         </h2>
       </motion.div>
 
       <motion.div variants={item}>
-        <Tabs defaultValue="all" value={filter} onValueChange={setFilter}>
-          <TabsList className="inline-flex flex-wrap justify-center gap-2 mb-8 bg-muted/50 p-1 border rounded-lg">
-            {["all", "frontend", "backend", "fullstack"].map((type) => (
-              <TabsTrigger
-                key={type}
-                value={type}
-                className="capitalize px-4 py-2 data-[state=active]:bg-primary data-[state=active]:text-primary-foreground"
-              >
-                {type}
-              </TabsTrigger>
-            ))}
-          </TabsList>
-        </Tabs>
+        {/* Replace Tabs with a flex container with buttons like SkillsSection */}
+        <div className="flex flex-wrap justify-center gap-2 mb-8 p-1 rounded-lg overflow-x-auto">
+          {categories.map((category) => (
+            <button
+              key={category}
+              onClick={() => handleFilterClick(category)}
+              className={`capitalize px-4 py-2 rounded-md transition-colors duration-200 ${
+                filter === category
+                  ? "bg-primary text-primary-foreground"
+                  : "bg-transparent hover:bg-primary/30"
+              }`}
+            >
+              {category}
+            </button>
+          ))}
+        </div>
       </motion.div>
 
       <motion.div
@@ -74,7 +86,7 @@ export function ProjectsSection({ projectsData }: Props) {
               exit={{ opacity: 0, scale: 0.95 }}
               transition={{ duration: 0.4 }}
               onClick={() => setSelectedProject(project.id)}
-              className="bg-card border border-border rounded-2xl shadow-md hover:shadow-xl transition-shadow duration-300 overflow-hidden cursor-pointer group"
+              className="bg-card  rounded-2xl shadow-md hover:shadow-xl transition-shadow duration-300 overflow-hidden cursor-pointer group"
             >
               <div className="relative aspect-[4/3] w-full overflow-hidden">
                 <Image
@@ -198,7 +210,6 @@ export function ProjectsSection({ projectsData }: Props) {
                         </a>
                       </Button>
                       <Button
-                        // variant="ghost"
                         className="ml-auto"
                         onClick={() => setSelectedProject(null)}
                       >
