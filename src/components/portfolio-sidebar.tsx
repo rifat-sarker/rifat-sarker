@@ -52,10 +52,10 @@ export function PortfolioSidebar() {
             <SidebarMenuButton asChild isActive={pathname === "/"}>
               <Link
                 href="/"
-                className="flex items-center gap-3 py-2 px-3 text-base"
+                className="flex items-center gap-3 py-2 px-3 text-sm"
               >
                 <Home className="!h-5 !w-5" />
-                <span className="text-base">Home</span>
+                <span className="text-sm">Home</span>
               </Link>
             </SidebarMenuButton>
           </SidebarMenuItem>
@@ -64,10 +64,10 @@ export function PortfolioSidebar() {
             <SidebarMenuButton asChild isActive={pathname === "/education"}>
               <Link
                 href="/education"
-                className="flex items-center gap-3 py-2 px-3 text-base"
+                className="flex items-center gap-3 py-2 px-3 text-sm"
               >
                 <GraduationCap className="!h-5 !w-5" />
-                <span className="text-base">Education</span>
+                <span className="text-sm">Education</span>
               </Link>
             </SidebarMenuButton>
           </SidebarMenuItem>
@@ -76,10 +76,10 @@ export function PortfolioSidebar() {
             <SidebarMenuButton asChild isActive={pathname === "/skills"}>
               <Link
                 href="/skills"
-                className="flex items-center gap-3 py-2 px-3 text-base"
+                className="flex items-center gap-3 py-2 px-3 text-sm"
               >
                 <Wrench className="!h-5 !w-5" />
-                <span className="text-base">Skills</span>
+                <span className="text-sm">Skills</span>
               </Link>
             </SidebarMenuButton>
           </SidebarMenuItem>
@@ -88,10 +88,10 @@ export function PortfolioSidebar() {
             <SidebarMenuButton asChild isActive={pathname === "/projects"}>
               <Link
                 href="/projects"
-                className="flex items-center gap-3 py-2 px-3 text-base"
+                className="flex items-center gap-3 py-2 px-3 text-sm"
               >
                 <Blocks className="!h-5 !w-5" />
-                <span className="text-base">Projects</span>
+                <span className="text-sm">Projects</span>
               </Link>
             </SidebarMenuButton>
           </SidebarMenuItem>
@@ -100,10 +100,10 @@ export function PortfolioSidebar() {
             <SidebarMenuButton asChild isActive={pathname === "/blogs"}>
               <Link
                 href="/blogs"
-                className="flex items-center gap-3 py-2 px-3 text-base"
+                className="flex items-center gap-3 py-2 px-3 text-sm"
               >
                 <MessageSquare className="!h-5 !w-5" />
-                <span className="text-base">Blogs</span>
+                <span className="text-sm">Blogs</span>
               </Link>
             </SidebarMenuButton>
           </SidebarMenuItem>
@@ -112,10 +112,10 @@ export function PortfolioSidebar() {
             <SidebarMenuButton asChild isActive={pathname === "/about"}>
               <Link
                 href="/about"
-                className="flex items-center gap-3 py-2 px-3 text-base"
+                className="flex items-center gap-3 py-2 px-3 text-sm"
               >
                 <User className="!h-5 !w-5" />
-                <span className="text-base">About</span>
+                <span className="text-sm">About</span>
               </Link>
             </SidebarMenuButton>
           </SidebarMenuItem>
@@ -124,10 +124,10 @@ export function PortfolioSidebar() {
             <SidebarMenuButton asChild isActive={pathname === "/contact"}>
               <Link
                 href="/contact"
-                className="flex items-center gap-3 py-2 px-3 text-base"
+                className="flex items-center gap-3 py-2 px-3 text-sm"
               >
                 <Mail className="!h-5 !w-5" />
-                <span className="text-base">Contact</span>
+                <span className="text-sm">Contact</span>
               </Link>
             </SidebarMenuButton>
           </SidebarMenuItem>

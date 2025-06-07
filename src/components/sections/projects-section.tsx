@@ -18,15 +18,6 @@ export function ProjectsSection({ projectsData }: Props) {
   const [filter, setFilter] = useState("all");
   const [selectedProject, setSelectedProject] = useState<string | null>(null);
 
-  const container = {
-    hidden: { opacity: 0 },
-    show: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.1,
-      },
-    },
-  };
 
   const item = {
     hidden: { opacity: 0, y: 20 },
@@ -40,10 +31,12 @@ export function ProjectsSection({ projectsData }: Props) {
 
   return (
     <motion.div
-      variants={container}
-      initial="hidden"
+      initial={{ opacity: 0, x: 50 }}
+      whileInView={{ opacity: 1, x: 0 }}
+      transition={{ duration: 0.8 }}
+      viewport={{ once: true }}
       animate="show"
-      className="space-y-8 "
+      className="space-y-8 w-full"
     >
       <motion.div variants={item}>
         <h2 className="text-3xl font-bold mb-6 inline-block border-b-2 border-primary pb-2">

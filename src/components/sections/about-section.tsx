@@ -3,30 +3,21 @@
 import { motion } from "framer-motion";
 
 export default function AboutSection() {
-  const container = {
-    hidden: { opacity: 0 },
-    show: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.1,
-      },
-    },
-  };
-
-  const item = {
-    hidden: { opacity: 0, y: 20 },
-    show: { opacity: 1, y: 0 },
-  };
-
   return (
     <motion.div
-      variants={container}
-      initial="hidden"
-      whileInView="show"
-      viewport={{ once: true }}
+      initial={{ opacity: 0, rotateX: -90, transformOrigin: "top center" }}
+      whileInView={{ opacity: 1, rotateX: 0 }}
+      transition={{
+        type: "spring",
+        stiffness: 30,
+        damping: 20,
+        mass: 0.8,
+      }}
+      viewport={{ once: true, amount: 0.3 }}
       className="space-y-8 w-full"
     >
-      <motion.div variants={item}>
+      {/* About Me Section */}
+      <div>
         <h2 className="text-3xl font-bold mb-6 inline-block border-b-2 border-primary pb-2">
           About Me
         </h2>
@@ -37,14 +28,15 @@ export default function AboutSection() {
           real-world problems.
         </p>
         <p className="text-muted-foreground mb-4">
-          My journey in web development began 3 years ago, and since then, I have
-          worked on a variety of projects ranging from e-commerce platforms to
-          content management systems. I am constantly learning and adapting to
-          new technologies to stay at the forefront of web development.
+          My journey in web development began 3 years ago, and since then, I
+          have worked on a variety of projects ranging from e-commerce platforms
+          to content management systems. I am constantly learning and adapting
+          to new technologies to stay at the forefront of web development.
         </p>
-      </motion.div>
+      </div>
 
-      <motion.div variants={item}>
+      {/* Personal Info Section */}
+      <div>
         <h3 className="text-xl font-semibold mb-4">Personal Information</h3>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           <div>
@@ -69,17 +61,14 @@ export default function AboutSection() {
               <span className="font-medium">Phone:</span> +880 1642550487
             </p>
             <p>
-              <span className="font-medium">Email:</span>{" "}
-              rifatswd@gmail.com
+              <span className="font-medium">Email:</span> rifatswd@gmail.com
             </p>
-            {/* <p>
-              <span className="font-medium">Freelance:</span> Available
-            </p> */}
           </div>
         </div>
-      </motion.div>
+      </div>
 
-      <motion.div variants={item}>
+      {/* Expertise Section */}
+      <div>
         <h3 className="text-xl font-semibold mb-4">My Expertise</h3>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
           <div className="p-4 border rounded-lg">
@@ -102,7 +91,7 @@ export default function AboutSection() {
             </p>
           </div>
         </div>
-      </motion.div>
+      </div>
     </motion.div>
   );
 }

@@ -26,16 +26,6 @@ export function BlogSection({ blogsData }: Props) {
     setBlogPosts(blogsData);
   }, [blogsData]);
 
-  const container = {
-    hidden: { opacity: 0 },
-    show: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.1,
-      },
-    },
-  };
-
   const item = {
     hidden: { opacity: 0, y: 20 },
     show: { opacity: 1, y: 0 },
@@ -43,9 +33,15 @@ export function BlogSection({ blogsData }: Props) {
 
   return (
     <motion.div
-      variants={container}
-      initial="hidden"
-      animate="show"
+      initial={{ opacity: 0, rotateX: -90, transformOrigin: "left center" }}
+      whileInView={{ opacity: 1, rotateX: 0 }}
+      transition={{
+        type: "spring",
+        stiffness: 30,
+        damping: 20,
+        mass: 0.8,
+      }}
+      viewport={{ once: true, amount: 0.3 }}
       className="space-y-8 w-full"
     >
       <motion.div variants={item}>
