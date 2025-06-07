@@ -6,15 +6,6 @@ import { Download } from "lucide-react";
 import Link from "next/link";
 
 export default function HomeSection() {
-  const container = {
-    hidden: { opacity: 0 },
-    show: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.1,
-      },
-    },
-  };
 
   const item = {
     hidden: { opacity: 0, y: 20 },
@@ -23,10 +14,16 @@ export default function HomeSection() {
 
   return (
     <motion.div
-      variants={container}
-      initial="hidden"
-      animate="show"
-      className="space-y-16 w-full"
+      initial={{ opacity: 0, rotateX: -90, transformOrigin: "top center" }}
+      whileInView={{ opacity: 1, rotateX: 0 }}
+      transition={{
+        type: "spring",
+        stiffness: 30,
+        damping: 20,
+        mass: 0.8,
+      }}
+      viewport={{ once: true, amount: 0.3 }}
+      className="space-y-8 w-full"
     >
       {/* Top Hero Section */}
       <div className="flex flex-col md:flex-row gap-8 items-center">
