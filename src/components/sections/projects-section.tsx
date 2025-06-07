@@ -43,20 +43,17 @@ export function ProjectsSection({ projectsData }: Props) {
       variants={container}
       initial="hidden"
       animate="show"
-      className="space-y-8 relative"
+      className="space-y-8 "
     >
-      {/* Fixed Tab List */}
-      <motion.div
-        variants={item}
-        className="w-full flex flex-col items-center justify-center"
-      >
-        <Tabs
-          defaultValue="all"
-          value={filter}
-          onValueChange={setFilter}
-          className="relative"
-        >
-          <TabsList className="fixed top-10 left-1/2 transform -translate-x-1/2 mx-auto inline-flex flex-wrap justify-center gap-2 bg-muted/50 p-2 border rounded-lg shadow-lg z-50">
+      <motion.div variants={item}>
+        <h2 className="text-3xl font-bold mb-6 inline-block border-b-2 border-primary pb-2">
+          My Projects
+        </h2>
+      </motion.div>
+
+      <motion.div variants={item}>
+        <Tabs defaultValue="all" value={filter} onValueChange={setFilter}>
+          <TabsList className="inline-flex flex-wrap justify-center gap-2 mb-8 bg-muted/50 p-1 border rounded-lg">
             {["all", "frontend", "backend", "fullstack"].map((type) => (
               <TabsTrigger
                 key={type}
@@ -70,68 +67,61 @@ export function ProjectsSection({ projectsData }: Props) {
         </Tabs>
       </motion.div>
 
-      {/* Project Grid */}
       <motion.div
         variants={item}
-        className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 min-h-[400px] justify-center items-center mt-24"
+        className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6"
       >
         <AnimatePresence>
-          {filteredProjects.length > 0 ? (
-            filteredProjects.map((project) => (
-              <motion.div
-                key={project.id}
-                layout
-                initial={{ opacity: 0, scale: 0.95 }}
-                animate={{ opacity: 1, scale: 1 }}
-                exit={{ opacity: 0, scale: 0.95 }}
-                transition={{ duration: 0.4 }}
-                onClick={() => setSelectedProject(project.id)}
-                className="bg-card border border-border rounded-2xl shadow-md hover:shadow-xl transition-shadow duration-300 overflow-hidden cursor-pointer group"
-              >
-                <div className="relative aspect-[4/3] w-full overflow-hidden">
-                  <Image
-                    src={project.image || "/placeholder.jpg"}
-                    alt={project.name}
-                    fill
-                    className="object-cover group-hover:scale-105 transition-transform duration-500"
-                  />
-                </div>
+          {filteredProjects.map((project) => (
+            <motion.div
+              key={project.id}
+              layout
+              initial={{ opacity: 0, scale: 0.95 }}
+              animate={{ opacity: 1, scale: 1 }}
+              exit={{ opacity: 0, scale: 0.95 }}
+              transition={{ duration: 0.4 }}
+              onClick={() => setSelectedProject(project.id)}
+              className="bg-card border border-border rounded-2xl shadow-md hover:shadow-xl transition-shadow duration-300 overflow-hidden cursor-pointer group"
+            >
+              <div className="relative aspect-[4/3] w-full overflow-hidden">
+                <Image
+                  src={project.image || "/placeholder.jpg"}
+                  alt={project.name}
+                  fill
+                  className="object-cover group-hover:scale-105 transition-transform duration-500"
+                />
+              </div>
 
-                <div className="p-4 flex flex-col gap-2">
-                  <h3 className="text-lg font-semibold tracking-tight">
-                    {project.name}
-                  </h3>
-                  <p className="text-sm text-muted-foreground line-clamp-3">
-                    {project.description}
-                  </p>
+              <div className="p-4 flex flex-col gap-2">
+                <h3 className="text-lg font-semibold tracking-tight">
+                  {project.name}
+                </h3>
+                <p className="text-sm text-muted-foreground line-clamp-3">
+                  {project.description}
+                </p>
 
-                  <div className="flex flex-wrap gap-2 mt-2">
-                    {project.technologies.slice(0, 3).map((tech) => (
-                      <Badge
-                        key={tech}
-                        variant="outline"
-                        className="text-xs px-2 py-0.5 rounded-md"
-                      >
-                        {tech}
-                      </Badge>
-                    ))}
-                    {project.technologies.length > 3 && (
-                      <Badge
-                        variant="outline"
-                        className="text-xs px-2 py-0.5 rounded-md"
-                      >
-                        +{project.technologies.length - 3}
-                      </Badge>
-                    )}
-                  </div>
+                <div className="flex flex-wrap gap-2 mt-2">
+                  {project.technologies.slice(0, 3).map((tech) => (
+                    <Badge
+                      key={tech}
+                      variant="outline"
+                      className="text-xs px-2 py-0.5 rounded-md"
+                    >
+                      {tech}
+                    </Badge>
+                  ))}
+                  {project.technologies.length > 3 && (
+                    <Badge
+                      variant="outline"
+                      className="text-xs px-2 py-0.5 rounded-md"
+                    >
+                      +{project.technologies.length - 3}
+                    </Badge>
+                  )}
                 </div>
-              </motion.div>
-            ))
-          ) : (
-            <div className="w-full flex justify-center items-center text-muted-foreground">
-              <p>No projects available in this category.</p>
-            </div>
-          )}
+              </div>
+            </motion.div>
+          ))}
         </AnimatePresence>
       </motion.div>
 
@@ -215,6 +205,7 @@ export function ProjectsSection({ projectsData }: Props) {
                         </a>
                       </Button>
                       <Button
+                        // variant="ghost"
                         className="ml-auto"
                         onClick={() => setSelectedProject(null)}
                       >
