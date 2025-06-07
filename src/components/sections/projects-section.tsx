@@ -14,15 +14,14 @@ type Props = {
 };
 
 export function ProjectsSection({ projectsData }: Props) {
-  const [filter, setFilter] = useState<string | null>("all"); // null means no filter (= all)
+  const [filter, setFilter] = useState<string | null>("all"); 
   const [selectedProject, setSelectedProject] = useState<string | null>(null);
 
   const categories = ["all", "frontend", "backend", "fullstack"];
 
-  // Toggle filter on click, same as SkillsSection category toggle
   function handleFilterClick(category: string) {
     if (filter === category) {
-      setFilter(null); // reset to "all" (no filter)
+      setFilter(null);
     } else {
       setFilter(category);
     }
@@ -54,7 +53,6 @@ export function ProjectsSection({ projectsData }: Props) {
       </motion.div>
 
       <motion.div variants={item}>
-        {/* Replace Tabs with a flex container with buttons like SkillsSection */}
         <div className="flex flex-wrap justify-center gap-2 mb-8 p-1 rounded-lg overflow-x-auto">
           {categories.map((category) => (
             <button
@@ -172,10 +170,13 @@ export function ProjectsSection({ projectsData }: Props) {
                       <Image
                         src={project.image || "/placeholder.jpg"}
                         alt={project.name}
-                        height={300}
-                        width={300}
+                        width={900} 
+                        height={675} 
                         className="w-full h-auto rounded-lg mb-4"
+                        quality={100} 
+                        priority
                       />
+
                       <p className="text-muted-foreground">
                         {project.description}
                       </p>
