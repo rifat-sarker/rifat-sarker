@@ -58,7 +58,7 @@ export function ProjectsSection({ projectsData }: Props) {
             <button
               key={category}
               onClick={() => handleFilterClick(category)}
-              className={`capitalize px-4 py-2 rounded-md transition-colors duration-200 ${
+              className={`capitalize text-sm px-4 py-2 rounded-md transition-colors duration-200 ${
                 filter === category
                   ? "bg-primary text-primary-foreground"
                   : "bg-transparent hover:bg-primary/30"
@@ -86,12 +86,14 @@ export function ProjectsSection({ projectsData }: Props) {
               onClick={() => setSelectedProject(project.id)}
               className="bg-card  rounded-2xl shadow-md hover:shadow-xl transition-shadow duration-300 overflow-hidden cursor-pointer group"
             >
-              <div className="relative aspect-[4/3] w-full overflow-hidden">
+              <div className="relative w-full rounded-lg overflow-hidden">
                 <Image
                   src={project.image || "/placeholder.jpg"}
                   alt={project.name}
-                  fill
-                  className="object-cover group-hover:scale-105 transition-transform duration-500"
+                  width={400} // or 300 or whatever fits your grid
+                  height={300}
+                  quality={85}
+                  className="w-full h-auto group-hover:scale-105 transition-transform duration-500 rounded-lg object-contain"
                 />
               </div>
 
@@ -122,6 +124,15 @@ export function ProjectsSection({ projectsData }: Props) {
                     </Badge>
                   )}
                 </div>
+                <Button asChild>
+                  <a
+                    href={project.liveUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <ExternalLink className="mr-2 h-4 w-4" /> Live Demo
+                  </a>
+                </Button>
               </div>
             </motion.div>
           ))}
@@ -170,10 +181,10 @@ export function ProjectsSection({ projectsData }: Props) {
                       <Image
                         src={project.image || "/placeholder.jpg"}
                         alt={project.name}
-                        width={900} 
-                        height={675} 
+                        width={900}
+                        height={675}
                         className="w-full h-auto rounded-lg mb-4"
-                        quality={100} 
+                        quality={100}
                         priority
                       />
 

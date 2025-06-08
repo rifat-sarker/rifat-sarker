@@ -21,13 +21,13 @@ export default function AboutSection() {
         <h2 className="text-3xl font-bold mb-6 inline-block border-b-2 border-primary pb-2">
           About Me
         </h2>
-        <p className="text-muted-foreground mb-4">
+        <p className=" mb-4">
           I am a passionate Full-Stack Developer with expertise in modern web
           technologies. With a strong foundation in both frontend and backend
           development, I create seamless, user-friendly applications that solve
           real-world problems.
         </p>
-        <p className="text-muted-foreground mb-4">
+        <p className=" mb-4">
           My journey in web development began 3 years ago, and since then, I
           have worked on a variety of projects ranging from e-commerce platforms
           to content management systems. I am constantly learning and adapting
