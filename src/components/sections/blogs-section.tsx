@@ -112,10 +112,12 @@ export function BlogSection({ blogsData }: Props) {
       )}
 
       <motion.div variants={item} className="flex justify-center mt-12">
-        <Button className="gap-2">
-          <BookOpen className="h-4 w-4" />
-          View All Blogs
-        </Button>
+        <Link href={'/blogs'}>
+          <Button className="gap-2">
+            <BookOpen className="h-4 w-4" />
+            View All Blogs
+          </Button>
+        </Link>
       </motion.div>
     </motion.div>
   );
