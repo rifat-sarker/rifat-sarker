@@ -10,7 +10,7 @@ export function ModeToggle() {
   return (
     <Button
       size="icon"
-      className=""
+      className="rounded-full"
       onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
       aria-label="Toggle theme"
     >
