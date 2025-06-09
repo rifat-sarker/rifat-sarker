@@ -80,7 +80,7 @@ export function MobileNav() {
                         }`}
                       >
                         <route.icon className="!h-6 !w-6" />
-                        <span>{route.label}</span>
+                        <span className="text-sm">{route.label}</span>
                       </Link>
                     </li>
                   );
