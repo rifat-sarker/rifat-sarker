@@ -8,6 +8,7 @@ import { ExternalLink } from "lucide-react";
 import Image from "next/image";
 import { FiGithub } from "react-icons/fi";
 import { Project } from "@/types/project";
+import ReactMarkdown from "react-markdown";
 
 type Props = {
   projectsData: Project[];
@@ -90,7 +91,7 @@ export function ProjectsSection({ projectsData }: Props) {
                 <Image
                   src={project.image || "/placeholder.jpg"}
                   alt={project.name}
-                  width={400} // or 300 or whatever fits your grid
+                  width={400} 
                   height={300}
                   quality={85}
                   className="w-full h-auto group-hover:scale-105 transition-transform duration-500 rounded-lg object-contain"
@@ -124,7 +125,7 @@ export function ProjectsSection({ projectsData }: Props) {
                     </Badge>
                   )}
                 </div>
-                <Button asChild>
+                <Button className="my-1" asChild>
                   <a
                     href={project.liveUrl}
                     target="_blank"
@@ -187,10 +188,13 @@ export function ProjectsSection({ projectsData }: Props) {
                         quality={100}
                         priority
                       />
+                      <div className="prose prose-neutral max-w-none">
+                        <ReactMarkdown>{project.description}</ReactMarkdown>
+                      </div>
 
-                      <p className="text-muted-foreground">
+                      {/* <p className="text-muted-foreground">
                         {project.description}
-                      </p>
+                      </p> */}
                     </div>
 
                     <div className="flex flex-wrap gap-4">
