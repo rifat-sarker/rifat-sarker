@@ -6,7 +6,6 @@ import { usePathname } from "next/navigation";
 import { Button } from "@/components/ui/button";
 import {
   Sheet,
-  SheetClose,
   SheetContent,
   SheetTrigger,
 } from "@/components/ui/sheet";
@@ -20,7 +19,6 @@ import {
   GraduationCap,
   Wrench,
   X,
-  TwitterIcon,
 } from "lucide-react";
 import { FiFacebook, FiGithub } from "react-icons/fi";
 import { CiLinkedin } from "react-icons/ci";
@@ -69,14 +67,7 @@ export function MobileNav() {
               </div>
             </Link>
 
-            {/* <SheetClose asChild>
-              <button
-                className="absolute top-3 right-3 z-50 text-white dark:text-white bg-black/60 hover:bg-black/80 rounded-full p-2"
-                aria-label="Close"
-              >
-                <X className="w-5 h-5" />
-              </button>
-            </SheetClose> */}
+
 
             <nav className="flex-1 py-4 text-black dark:text-white">
               <ul className="space-y-2 px-2">
@@ -134,7 +125,7 @@ export function MobileNav() {
                     rel="noopener noreferrer"
                     className="duration-300 hover:scale-150"
                   >
-                    <TwitterIcon className="!h-6 !w-6" />
+                    <X className="!h-6 !w-6" />
                     <span className="sr-only">Twitter</span>
                   </a>
                 </Button>
