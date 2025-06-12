@@ -74,7 +74,7 @@ export function SkillsSection({ skills }: SkillsSectionProps) {
 
   return (
     <motion.div
-      initial={{ opacity: 0, rotateX: -90, transformOrigin: "left center" }}
+      initial={{ opacity: 0, rotateX: -90, transformOrigin: "top center" }}
       whileInView={{ opacity: 1, rotateX: 0 }}
       transition={{
         type: "spring",

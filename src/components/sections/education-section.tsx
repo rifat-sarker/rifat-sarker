@@ -12,15 +12,11 @@ export function EducationSection() {
 
   return (
     <motion.div
-      initial={{ opacity: 0, rotateX: -90, transformOrigin: "bottom center" }}
-      whileInView={{ opacity: 1, rotateX: 0 }}
-      transition={{
-        type: "spring",
-        stiffness: 30,
-        damping: 20,
-        mass: 0.8,
-      }}
-      viewport={{ once: true, amount: 0.3 }}
+      initial={{ opacity: 0, x: -50 }}
+      whileInView={{ opacity: 1, x: 0 }}
+      transition={{ duration: 0.8 }}
+      viewport={{ once: true }}
+      animate="show"
       className="space-y-8 w-full"
     >
       <motion.div variants={item}>

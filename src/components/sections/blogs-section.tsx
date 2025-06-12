@@ -33,15 +33,11 @@ export function BlogSection({ blogsData }: Props) {
 
   return (
     <motion.div
-      initial={{ opacity: 0, rotateX: -90, transformOrigin: "left center" }}
-      whileInView={{ opacity: 1, rotateX: 0 }}
-      transition={{
-        type: "spring",
-        stiffness: 30,
-        damping: 20,
-        mass: 0.8,
-      }}
-      viewport={{ once: true, amount: 0.3 }}
+      initial={{ opacity: 0, x: -50 }}
+      whileInView={{ opacity: 1, x: 0 }}
+      transition={{ duration: 0.8 }}
+      viewport={{ once: true }}
+      animate="show"
       className="space-y-8 w-full"
     >
       <motion.div variants={item}>
@@ -112,7 +108,7 @@ export function BlogSection({ blogsData }: Props) {
       )}
 
       <motion.div variants={item} className="flex justify-center mt-12">
-        <Link href={'/blogs'}>
+        <Link href={"/blogs"}>
           <Button className="gap-2">
             <BookOpen className="h-4 w-4" />
             View All Blogs

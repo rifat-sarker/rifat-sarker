@@ -27,6 +27,7 @@ export const getSkills = async () => {
     headers: {
       "Content-Type": "application/json",
     },
+    cache: "no-store",
   });
 
   if (!res.ok) {
@@ -43,6 +44,7 @@ export const getBlogs = async () => {
     headers: {
       "Content-Type": "application/json",
     },
+    cache: "no-store",
   });
 
   if (!res.ok) {
