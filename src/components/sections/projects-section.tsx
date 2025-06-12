@@ -8,14 +8,13 @@ import { ExternalLink } from "lucide-react";
 import Image from "next/image";
 import { FiGithub } from "react-icons/fi";
 import { Project } from "@/types/project";
-import ReactMarkdown from "react-markdown";
 
 type Props = {
   projectsData: Project[];
 };
 
 export function ProjectsSection({ projectsData }: Props) {
-  const [filter, setFilter] = useState<string | null>("all"); 
+  const [filter, setFilter] = useState<string | null>("all");
   const [selectedProject, setSelectedProject] = useState<string | null>(null);
 
   const categories = ["all", "frontend", "backend", "fullstack"];
@@ -91,7 +90,7 @@ export function ProjectsSection({ projectsData }: Props) {
                 <Image
                   src={project.image || "/placeholder.jpg"}
                   alt={project.name}
-                  width={400} 
+                  width={400}
                   height={300}
                   quality={85}
                   className="w-full h-auto group-hover:scale-105 transition-transform duration-500 rounded-lg object-contain"
@@ -102,9 +101,16 @@ export function ProjectsSection({ projectsData }: Props) {
                 <h3 className="text-lg font-semibold tracking-tight">
                   {project.name}
                 </h3>
-                <p className="text-sm text-muted-foreground line-clamp-3">
+
+                <div
+                  className="prose max-w-none line-clamp-4 text-sm text-muted-foreground"
+                  dangerouslySetInnerHTML={{
+                    __html: project.description ?? "",
+                  }}
+                />
+                {/* <p className="text-sm text-muted-foreground line-clamp-3">
                   {project.description}
-                </p>
+                </p> */}
 
                 <div className="flex flex-wrap gap-2 mt-2">
                   {project.technologies.slice(0, 3).map((tech) => (
@@ -188,9 +194,13 @@ export function ProjectsSection({ projectsData }: Props) {
                         quality={100}
                         priority
                       />
-                      <div className="prose prose-neutral max-w-none">
-                        <ReactMarkdown>{project.description}</ReactMarkdown>
-                      </div>
+
+                      <div
+                        className="prose max-w-none"
+                        dangerouslySetInnerHTML={{
+                          __html: project.description ?? "",
+                        }}
+                      />
 
                       {/* <p className="text-muted-foreground">
                         {project.description}
