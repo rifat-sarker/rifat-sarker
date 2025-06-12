@@ -4,7 +4,12 @@ import { useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { Button } from "@/components/ui/button";
-import { Sheet, SheetClose, SheetContent, SheetTrigger } from "@/components/ui/sheet";
+import {
+  Sheet,
+  SheetClose,
+  SheetContent,
+  SheetTrigger,
+} from "@/components/ui/sheet";
 import {
   Home,
   User,
@@ -73,7 +78,7 @@ export function MobileNav() {
               </button>
             </SheetClose> */}
 
-            <nav className="flex-1 py-4">
+            <nav className="flex-1 py-4 text-black dark:text-white">
               <ul className="space-y-2 px-2">
                 {routes.map((route) => {
                   const isActive = pathname === route.href;

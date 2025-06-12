@@ -122,9 +122,3 @@
   }
 }
 
-
-
-/* hide default shadcn close button */
-[data-state="open"] button.absolute.top-4.right-4 {
-  display: none !important;
-}
