@@ -124,7 +124,7 @@ export function MobileNav() {
                     target="_blank"
                     rel="noopener noreferrer"
                     className="duration-300 hover:scale-150"
-                  >
+                  >   
                     <X className="!h-6 !w-6" />
                     <span className="sr-only">Twitter</span>
                   </a>
