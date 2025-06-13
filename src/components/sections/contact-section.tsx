@@ -8,9 +8,13 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Card, CardContent } from "@/components/ui/card";
-import { MapPin, Phone, Mail, Send, Loader2 } from "lucide-react";
+import { MapPin, Mail, Send, Loader2, MessageCircle } from "lucide-react";
 import { toast } from "sonner";
 import { sendContactMail } from "@/service";
+
+
+const email = "rifatswd@gmail.com";
+const whatsapp = "+880 1642550487";
 
 export function ContactSection() {
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -99,37 +103,44 @@ export function ContactSection() {
             </CardContent>
           </Card>
 
-          <Card>
-            <CardContent className="p-6">
-              <div className="flex items-center gap-4">
-                <div className="p-3 rounded-full bg-primary/10">
-                  <Mail className="h-5 w-5 text-primary" />
+          {/* Email Card */}
+          <a href={`mailto:${email}`} className="block hover:opacity-90">
+            <Card>
+              <CardContent className="p-6">
+                <div className="flex items-center gap-4 cursor-pointer">
+                  <div className="p-3 rounded-full bg-primary/10">
+                    <Mail className="h-5 w-5 text-primary" />
+                  </div>
+                  <div>
+                    <h3 className="font-medium">Email</h3>
+                    <p className="text-sm text-muted-foreground">{email}</p>
+                  </div>
                 </div>
-                <div>
-                  <h3 className="font-medium">Email</h3>
-                  <p className="text-sm text-muted-foreground">
-                    rifatswd@gmail.com
-                  </p>
-                </div>
-              </div>
-            </CardContent>
-          </Card>
+              </CardContent>
+            </Card>
+          </a>
 
-          <Card>
-            <CardContent className="p-6">
-              <div className="flex items-center gap-4">
-                <div className="p-3 rounded-full bg-primary/10">
-                  <Phone className="h-5 w-5 text-primary" />
+          {/* WhatsApp Card */}
+          <a
+            href={`https://wa.me/${whatsapp.replace(/\D/g, "")}`}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="block hover:opacity-90"
+          >
+            <Card>
+              <CardContent className="p-6">
+                <div className="flex items-center gap-4 cursor-pointer">
+                  <div className="p-3 rounded-full bg-primary/10">
+                    <MessageCircle className="h-5 w-5 text-primary" />
+                  </div>
+                  <div>
+                    <h3 className="font-medium">WhatsApp</h3>
+                    <p className="text-sm text-muted-foreground">{whatsapp}</p>
+                  </div>
                 </div>
-                <div>
-                  <h3 className="font-medium">Phone</h3>
-                  <p className="text-sm text-muted-foreground">
-                    +880 1642550487
-                  </p>
-                </div>
-              </div>
-            </CardContent>
-          </Card>
+              </CardContent>
+            </Card>
+          </a>
         </motion.div>
 
         <motion.div variants={item} className="lg:col-span-2">
