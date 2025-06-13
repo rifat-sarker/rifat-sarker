@@ -182,7 +182,7 @@ export function PortfolioSidebar() {
           </Button>
         </div>
         <p className="text-sm text-center opacity-70">
-          {new Date().getFullYear()} © Rifat Sarker.
+          {new Date().getFullYear()} ©Rifat Sarker.
         </p>
       </SidebarFooter>
     </Sidebar>

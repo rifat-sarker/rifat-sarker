@@ -28,7 +28,7 @@ export function EducationSection() {
       <div className="flex gap-8 justify-center w-full">
         <motion.div variants={item}>
           <div className="space-y-6 grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 justify-center">
-            <div className="relative pl-6 border-l-2 border-muted pb-6">
+            <div className="relative pl-6 border-l-2 border-border pb-6">
               <div className="absolute w-3 h-3 bg-primary rounded-full -left-[7px] top-1.5"></div>
               <div className="mb-1">
                 <Badge className="mb-2">2019 - 2026</Badge>
@@ -44,7 +44,7 @@ export function EducationSection() {
               </p>
             </div>
 
-            <div className="relative pl-6 border-l-2 border-muted">
+            <div className="relative pl-6 border-l-2 border-border">
               <div className="absolute w-3 h-3 bg-primary rounded-full -left-[7px] top-1.5"></div>
               <div className="mb-1">
                 <Badge className="mb-2">2017 - 2019</Badge>
@@ -59,7 +59,7 @@ export function EducationSection() {
                 Science group with focus on Mathematics and Physics.
               </p>
             </div>
-            <div className="relative pl-6 border-l-2 border-muted">
+            <div className="relative pl-6 border-l-2 border-border">
               <div className="absolute w-3 h-3 bg-primary rounded-full -left-[7px] top-1.5"></div>
               <div className="mb-1">
                 <Badge className="mb-2">2024 - 2025</Badge>
@@ -81,7 +81,7 @@ export function EducationSection() {
                 </Link>
               </p>
             </div>
-            <div className="relative pl-6 border-l-2 border-muted">
+            <div className="relative pl-6 border-l-2 border-border">
               <div className="absolute w-3 h-3 bg-primary rounded-full -left-[7px] top-1.5"></div>
               <div className="mb-1">
                 <Badge className="mb-2">2023 - 2024</Badge>
@@ -103,7 +103,7 @@ export function EducationSection() {
                 </Link>
               </p>
             </div>
-            <div className="relative pl-6 border-l-2 border-muted">
+            <div className="relative pl-6 border-l-2 border-border">
               <div className="absolute w-3 h-3 bg-primary rounded-full -left-[7px] top-1.5"></div>
               <div className="mb-1">
                 <Badge className="mb-2">2023</Badge>
@@ -121,7 +121,7 @@ export function EducationSection() {
                 </Link>
               </p>
             </div>
-            <div className="relative pl-6 border-l-2 border-muted">
+            <div className="relative pl-6 border-l-2 border-border">
               <div className="absolute w-3 h-3 bg-primary rounded-full -left-[7px] top-1.5"></div>
               <div className="mb-1">
                 <Badge className="mb-2">2023</Badge>
@@ -139,7 +139,7 @@ export function EducationSection() {
                 </Link>
               </p>
             </div>
-            <div className="relative pl-6 border-l-2 border-muted">
+            <div className="relative pl-6 border-l-2 border-border">
               <div className="absolute w-3 h-3 bg-primary rounded-full -left-[7px] top-1.5"></div>
               <div className="mb-1">
                 <Badge className="mb-2">2017</Badge>
