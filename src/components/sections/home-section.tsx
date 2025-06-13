@@ -26,8 +26,8 @@ export default function HomeSection() {
       className="space-y-8 w-full"
     >
       {/* Top Hero Section */}
-      <div className="flex flex-col md:flex-row gap-8 items-center">
-        <motion.div variants={item} className="w-full md:w-1/3">
+      <div className="flex flex-col lg:flex-row gap-8 items-center">
+        <motion.div variants={item} className="w-full lg:w-1/3">
           <div className="relative w-64 h-64 mx-auto">
             <div className="absolute inset-0 rounded-full bg-gradient-to-br from-primary to-primary-foreground opacity-20 blur-xl" />
             <div className="absolute inset-2 rounded-full bg-gradient-to-br from-primary/80 to-background" />
@@ -41,7 +41,7 @@ export default function HomeSection() {
 
         <motion.div
           variants={item}
-          className="w-full md:w-2/3 text-center md:text-left"
+          className="w-full md:w-2/3 text-center lg:text-left"
         >
           <h1 className="text-4xl md:text-5xl font-bold mb-4">Rifat Sarker</h1>
           <h2 className="text-xl md:text-2xl text-primary mb-6">
@@ -52,7 +52,7 @@ export default function HomeSection() {
             Transforming ideas into elegant, functional applications.
           </p>
 
-          <div className="flex flex-wrap gap-4 justify-center md:justify-start">
+          <div className="flex flex-wrap gap-4 justify-center lg:justify-start">
             <Link
               target="_blank"
               href={
