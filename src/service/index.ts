@@ -10,8 +10,9 @@ export const getProjects = async () => {
       "Content-Type": "application/json",
     },
     cache: "no-store",
-
   });
+
+  console.log("Fetching from: ", process.env.NEXT_PUBLIC_BASE_API);
 
   if (!res.ok) {
     throw new Error("Failed to fetch projects");
@@ -56,12 +57,9 @@ export const getBlogs = async () => {
 
 export async function getBlogById(id: string): Promise<Blog | null> {
   try {
-    const res = await fetch(
-      `${process.env.NEXT_PUBLIC_BASE_API}/blogs/${id}`,
-      {
-        cache: "no-store",
-      }
-    );
+    const res = await fetch(`${process.env.NEXT_PUBLIC_BASE_API}/blogs/${id}`, {
+      cache: "no-store",
+    });
 
     console.log(res);
     if (!res.ok) throw new Error("Failed to fetch");

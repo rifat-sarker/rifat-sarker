@@ -46,13 +46,13 @@ export function PortfolioSidebar() {
           </div>
         </Link>
       </SidebarHeader>
-      <SidebarContent className="p-2 mx-auto">
+      <SidebarContent className="px-14 py-4">
         <SidebarMenu className="space-y-1">
           <SidebarMenuItem>
             <SidebarMenuButton asChild isActive={pathname === "/"}>
               <Link
                 href="/"
-                className="flex items-center gap-3 py-2 px-3 text-sm"
+                className="flex items-center gap-3 py-2 px-3 text-sm "
               >
                 <Home className="!h-5 !w-5" />
                 <span className="text-sm">Home</span>
@@ -141,7 +141,7 @@ export function PortfolioSidebar() {
               href="https://github.com/rifat-sarker"
               target="_blank"
               rel="noopener noreferrer"
-              className="duration-300 hover:scale-150"
+              className="duration-300 hover:scale-125"
             >
               <FiGithub className="!h-6 !w-6 " />
               <span className="sr-only">GitHub</span>
@@ -152,7 +152,7 @@ export function PortfolioSidebar() {
               href="https://linkedin.com/in/rifatswd"
               target="_blank"
               rel="noopener noreferrer"
-              className="duration-300 hover:scale-150"
+              className="duration-300 hover:scale-125"
             >
               <CiLinkedin className="!h-6 !w-6" />
               <span className="sr-only">LinkedIn</span>
@@ -163,7 +163,7 @@ export function PortfolioSidebar() {
               href="https://twitter.com/rifatswd"
               target="_blank"
               rel="noopener noreferrer"
-              className="duration-300 hover:scale-150"
+              className="duration-300 hover:scale-125"
             >
               <X className="!h-6 !w-6" />
               <span className="sr-only">Twitter</span>
@@ -174,15 +174,16 @@ export function PortfolioSidebar() {
               href="https://facebook.com/rifatswd"
               target="_blank"
               rel="noopener noreferrer"
-              className="duration-300 hover:scale-150"
+              className="duration-300 hover:scale-125"
             >
               <FiFacebook className="!h-6 !w-6" />
               <span className="sr-only">Facebook</span>
             </a>
           </Button>
         </div>
-        <p className="text-sm text-center opacity-70">2024 ©Rifat Sarker.</p>
-        {/* <p className="text-sm text-center">All rights reserved.</p> */}
+        <p className="text-sm text-center opacity-70">
+          {new Date().getFullYear()} © Rifat Sarker.
+        </p>
       </SidebarFooter>
     </Sidebar>
   );
