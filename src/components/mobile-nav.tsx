@@ -67,8 +67,6 @@ export function MobileNav() {
               </div>
             </Link>
 
-
-
             <nav className="flex-1 py-4 text-black dark:text-white">
               <ul className="space-y-2 px-2">
                 {routes.map((route) => {

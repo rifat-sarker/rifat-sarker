@@ -111,6 +111,7 @@ export function SkillsSection({ skills }: SkillsSectionProps) {
                 All Skills
               </button>
 
+                {/* map categories */}
               {Object.keys(categories).map((category) => (
                 <button
                   key={category}
