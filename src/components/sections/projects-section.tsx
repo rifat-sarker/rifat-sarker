@@ -202,9 +202,7 @@ export function ProjectsSection({ projectsData }: Props) {
                         }}
                       />
 
-                      {/* <p className="text-muted-foreground">
-                        {project.description}
-                      </p> */}
+                    
                     </div>
 
                     <div className="flex flex-wrap gap-4">

@@ -143,6 +143,7 @@ export function ContactSection() {
           </a>
         </motion.div>
 
+      {/* contact form */}
         <motion.div variants={item} className="lg:col-span-2">
           <Card>
             <CardContent className="p-6">
