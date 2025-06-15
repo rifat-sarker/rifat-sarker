@@ -4,7 +4,7 @@ import { getBlogs } from "@/service";
 
 export default async function BlogsPage() {
   const { data: blogsData } = await getBlogs();
-  // console.log("Blogs received:", blogsData);
+
   return (
     <PortfolioLayout>
       <BlogSection blogsData={blogsData} />

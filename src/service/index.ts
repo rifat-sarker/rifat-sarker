@@ -55,6 +55,7 @@ export const getBlogs = async () => {
   return res.json();
 };
 
+// This function is used to fetch a blog by its ID
 export async function getBlogById(id: string): Promise<Blog | null> {
   try {
     const res = await fetch(`${process.env.NEXT_PUBLIC_BASE_API}/blogs/${id}`, {

@@ -2,12 +2,9 @@ import type { Metadata } from "next";
 import "./globals.css";
 import { ThemeProvider } from "@/components/theme-provider";
 import { Toaster } from "sonner";
-import {  Open_Sans } from "next/font/google";
+import { Open_Sans } from "next/font/google";
 
-
-
-const open_sans = Open_Sans({subsets: ["latin"]})
-
+const open_sans = Open_Sans({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Rifat Sarker",
