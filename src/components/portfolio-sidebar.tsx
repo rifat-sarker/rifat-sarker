@@ -22,7 +22,7 @@ import {
   Blocks,
 } from "lucide-react";
 import Image from "next/image";
-import profileImg from "../../public/profile-img.jpg";
+import profileImg from "../../public/profile-pic.png";
 import { FiFacebook, FiGithub } from "react-icons/fi";
 import { CiLinkedin } from "react-icons/ci";
 import SidebarMenuButton from "./sidebar-menu-button";

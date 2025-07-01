@@ -23,7 +23,7 @@ import {
 import { FiFacebook, FiGithub } from "react-icons/fi";
 import { CiLinkedin } from "react-icons/ci";
 import Image from "next/image";
-import profileImg from "../../public/profile-img.jpg";
+import profileImg from "../../public/profile-pic.png";
 
 export function MobileNav() {
   const [open, setOpen] = useState(false);
