@@ -57,7 +57,7 @@ export function MobileNav() {
             <Link href="/" className="flex items-center gap-2 ">
               <div className="relative w-full">
                 <Image
-                  className="w-full h-60 object-cover"
+                  className="w-full h-72 object-cover"
                   src={profileImg}
                   alt="profile-image"
                 />
