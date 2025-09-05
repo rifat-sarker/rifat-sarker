@@ -25,12 +25,10 @@ export function PortfolioLayout({ children }: PortfolioLayoutProps) {
         </div>
 
         {/* Main Content Area */}
-
         <div className="flex-1 flex flex-col w-full">
           <div className="top-2 lg:top-8 right-14 z-50 fixed">
             <ModeToggle />
           </div>
-
           <main className="flex-1 p-4 md:p-10 mt-10 overflow-auto w-full">
             {children}
           </main>
