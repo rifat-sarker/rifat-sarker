@@ -1,4 +1,3 @@
-// components/ui/GlobalLoader.tsx
 "use client";
 
 import { Cog } from "lucide-react";
