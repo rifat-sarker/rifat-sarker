@@ -22,7 +22,8 @@ import {
   Blocks,
 } from "lucide-react";
 import Image from "next/image";
-import profileImg from "../../public/profile-pic.png";
+// import profileImg from "../../public/rifat-photo.png";
+import profileImg from "../../public/Gemini_Generated_Image_39xwwu39xwwu39xw.png";
 import { FiFacebook, FiGithub } from "react-icons/fi";
 import { CiLinkedin } from "react-icons/ci";
 import SidebarMenuButton from "./sidebar-menu-button";

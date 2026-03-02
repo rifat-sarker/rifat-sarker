@@ -1,5 +1,4 @@
 "use server";
-
 import { Blog } from "@/types/blog";
 
 // This function is used to fetch project data
@@ -20,6 +19,7 @@ export const getProjects = async () => {
 
   return res.json();
 };
+
 
 // This function is used to fetch skills data
 export const getSkills = async () => {
@@ -72,6 +72,7 @@ export async function getBlogById(id: string): Promise<Blog | null> {
     return null;
   }
 }
+
 
 // This function is used to send a contact email
 export const sendContactMail = async ({
