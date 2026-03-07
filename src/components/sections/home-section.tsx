@@ -44,7 +44,7 @@ export default function HomeSection() {
         >
           <h1 className="text-4xl md:text-5xl font-bold mb-4">Rifat Sarker</h1>
           <h2 className="text-xl md:text-2xl text-primary mb-6">
-            Backend Developer • Full-Stack Engineer | SM Technology
+            Backend Developer | SM Technology
           </h2>
           <p className="text-muted-foreground mb-6">
             I build scalable APIs, backend systems, and database architectures

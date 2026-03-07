@@ -86,7 +86,16 @@ export default function AboutPage() {
         <div className="border rounded-lg p-6 space-y-2">
           <h3 className="text-lg font-semibold">Backend Developer</h3>
 
-          <p className="text-sm font-medium">SM Technology</p>
+          <p className="text-sm font-medium">
+            <a
+              href="https://smtech24.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:underline text-primary"
+            >
+              SM Technology
+            </a>
+          </p>
 
           <p className="text-sm text-muted-foreground">Aug 2026 – Present</p>
 
