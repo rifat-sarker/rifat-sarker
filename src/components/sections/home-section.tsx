@@ -44,11 +44,12 @@ export default function HomeSection() {
         >
           <h1 className="text-4xl md:text-5xl font-bold mb-4">Rifat Sarker</h1>
           <h2 className="text-xl md:text-2xl text-primary mb-6">
-            Backend Developer
+            Backend Developer • Full-Stack Engineer | SM Technology
           </h2>
           <p className="text-muted-foreground mb-6">
             I build scalable APIs, backend systems, and database architectures
-            using Node.js, Express, PostgreSQL, and modern web technologies.
+            using Node.js, Express, and PostgreSQL, while also delivering modern
+            full-stack applications with React and Next.js.
           </p>
 
           <div className="flex flex-wrap gap-4 justify-center lg:justify-start">
@@ -87,7 +88,7 @@ export default function HomeSection() {
 
         <div className="rounded-xl border bg-background p-6 text-center shadow-sm">
           <h3 className="text-lg font-semibold text-foreground">
-            Backend Developer
+            Full-Stack Development
           </h3>
           <p className="text-sm text-muted-foreground mt-1">
             From UI to API — React, Next.js, Tailwind, Node, PostgreSQL.
@@ -96,10 +97,11 @@ export default function HomeSection() {
 
         <div className="rounded-xl border bg-background p-6 text-center shadow-sm">
           <h3 className="text-lg font-semibold text-foreground">
-            Open to Work
+            Backend Engineering
           </h3>
           <p className="text-sm text-muted-foreground mt-1">
-            Available for remote jobs & freelance opportunities.
+            Building scalable APIs and production-ready systems. Available for
+            remote jobs & freelance opportunities.
           </p>
         </div>
       </motion.div>
@@ -115,9 +117,9 @@ export default function HomeSection() {
           </h3>
           <p className="text-muted-foreground">
             As a passionate developer, I love solving real-world problems with
-            clean code, efficient design, and meaningful UX. Whether it is a
-            sleek frontend or a robust backend, I focus on clarity, performance,
-            and impact.
+            clean code, efficient design, and meaningful UX. Whether it's
+            designing scalable backend systems or building modern frontend
+            interfaces.
           </p>
         </motion.div>
 

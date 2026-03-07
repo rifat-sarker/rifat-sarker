@@ -25,18 +25,18 @@ export default function AboutPage() {
 
       {/* About Section */}
       <div className="max-w-3xl  md:text-left">
-        <p className="mb-4 text-muted-foreground">
+        <p className="mb-4 text-muted-foreground text-sm">
           I am a Backend Developer specializing in building scalable APIs,
           secure authentication systems, and high-performance backend services.
         </p>
 
-        <p className="mb-4 text-muted-foreground">
+        <p className="mb-4 text-muted-foreground text-sm">
           Currently working as a Backend Developer where I develop and maintain
           production-grade backend services using Node.js, Express, PostgreSQL,
           and modern web technologies.
         </p>
 
-        <p className="text-muted-foreground">
+        <p className="text-muted-foreground text-sm">
           I have experience designing RESTful APIs, implementing JWT-based
           authentication, building role-based access control systems, and
           optimizing database performance. Although my primary focus is backend
@@ -51,27 +51,27 @@ export default function AboutPage() {
         <h2 className="text-2xl font-semibold mb-6">Personal Information</h2>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-          <div className="space-y-2">
+          <div className="space-y-2 text-sm text-muted-foreground">
             <p>
-              <span className="font-medium">Name:</span> Rifat Sarker
+              <span>Name:</span> Rifat Sarker
             </p>
             <p>
-              <span className="font-medium">Nationality:</span> Bangladeshi
+              <span>Nationality:</span> Bangladeshi
             </p>
             <p>
-              <span className="font-medium">Languages:</span> English, Bengali
+              <span>Languages:</span> English, Bengali
             </p>
           </div>
 
-          <div className="space-y-2">
+          <div className="space-y-2 text-sm text-muted-foreground">
             <p>
-              <span className="font-medium">Location:</span> Dhaka, Bangladesh
+              <span>Location:</span> Dhaka, Bangladesh
             </p>
             <p>
-              <span className="font-medium">Email:</span> rifatswd@gmail.com
+              <span>Email:</span> rifatswd@gmail.com
             </p>
             <p>
-              <span className="font-medium">Phone:</span> +880 1642550487
+              <span>Phone:</span> +880 1642550487
             </p>
           </div>
         </div>
@@ -79,7 +79,9 @@ export default function AboutPage() {
 
       {/* Experience Section */}
       <div>
-        <h2 className="text-2xl font-semibold mb-6">Professional Experience</h2>
+        <h2 className="text-2xl font-semibold mb-6 pt-4">
+          Professional Experience
+        </h2>
 
         <div className="border rounded-lg p-6 space-y-2">
           <h3 className="text-lg font-semibold">Backend Developer</h3>
