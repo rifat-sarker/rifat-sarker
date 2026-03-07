@@ -6,7 +6,6 @@ import { Download } from "lucide-react";
 import Link from "next/link";
 
 export default function HomeSection() {
-
   const item = {
     hidden: { opacity: 0, y: 20 },
     show: { opacity: 1, y: 0 },
@@ -45,11 +44,11 @@ export default function HomeSection() {
         >
           <h1 className="text-4xl md:text-5xl font-bold mb-4">Rifat Sarker</h1>
           <h2 className="text-xl md:text-2xl text-primary mb-6">
-            Full-Stack Developer
+            Backend Developer
           </h2>
           <p className="text-muted-foreground mb-6">
-            I build exceptional digital experiences with modern technologies.
-            Transforming ideas into elegant, functional applications.
+            I build scalable APIs, backend systems, and database architectures
+            using Node.js, Express, PostgreSQL, and modern web technologies.
           </p>
 
           <div className="flex flex-wrap gap-4 justify-center lg:justify-start">
@@ -79,7 +78,7 @@ export default function HomeSection() {
       >
         <div className="rounded-xl border bg-background p-6 text-center shadow-sm">
           <h3 className="text-lg font-semibold text-foreground">
-            2+ Years of Practice
+            3+ Years of Practice
           </h3>
           <p className="text-sm text-muted-foreground mt-1">
             Daily coding, building projects & improving every day.
@@ -88,7 +87,7 @@ export default function HomeSection() {
 
         <div className="rounded-xl border bg-background p-6 text-center shadow-sm">
           <h3 className="text-lg font-semibold text-foreground">
-            Full Stack Developer
+            Backend Developer
           </h3>
           <p className="text-sm text-muted-foreground mt-1">
             From UI to API — React, Next.js, Tailwind, Node, PostgreSQL.

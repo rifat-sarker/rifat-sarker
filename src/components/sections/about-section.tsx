@@ -2,9 +2,9 @@
 
 import { motion } from "framer-motion";
 
-export default function AboutSection() {
+export default function AboutPage() {
   return (
-    <motion.div
+    <motion.section
       initial={{ opacity: 0, rotateX: -90, transformOrigin: "top center" }}
       whileInView={{ opacity: 1, rotateX: 0 }}
       transition={{
@@ -14,37 +14,46 @@ export default function AboutSection() {
         mass: 0.8,
       }}
       viewport={{ once: true, amount: 0.3 }}
-      className="space-y-8 w-full"
+      className="w-full space-y-4"
     >
-      {/* About Me Section */}
-      <div>
-        <h2 className="text-3xl font-bold mb-6 inline-block border-b-2 border-primary pb-2">
+      {/* Heading */}
+      <div className="text">
+        <h1 className="text-3xl md:text-4xl font-bold border-b-2 border-primary inline-block pb-2">
           About Me
-        </h2>
-        <p className=" mb-4">
-          I am a passionate Full-Stack Developer with expertise in modern web
-          technologies. With a strong foundation in both frontend and backend
-          development, I create seamless, user-friendly applications that solve
-          real-world problems.
+        </h1>
+      </div>
+
+      {/* About Section */}
+      <div className="max-w-3xl  md:text-left">
+        <p className="mb-4 text-muted-foreground">
+          I am a Backend Developer specializing in building scalable APIs,
+          secure authentication systems, and high-performance backend services.
         </p>
-        <p className=" mb-4">
-          My journey in web development began 3 years ago, and since then, I
-          have worked on a variety of projects ranging from e-commerce platforms
-          to content management systems. I am constantly learning and adapting
-          to new technologies to stay at the forefront of web development.
+
+        <p className="mb-4 text-muted-foreground">
+          Currently working as a Backend Developer where I develop and maintain
+          production-grade backend services using Node.js, Express, PostgreSQL,
+          and modern web technologies.
+        </p>
+
+        <p className="text-muted-foreground">
+          I have experience designing RESTful APIs, implementing JWT-based
+          authentication, building role-based access control systems, and
+          optimizing database performance. Although my primary focus is backend
+          development, I also have experience with modern frontend technologies
+          like React and Next.js, which helps me collaborate effectively across
+          the full stack.
         </p>
       </div>
 
-      {/* Personal Info Section */}
+      {/* Personal Information */}
       <div>
-        <h3 className="text-xl font-semibold mb-4">Personal Information</h3>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-          <div>
+        <h2 className="text-2xl font-semibold mb-6">Personal Information</h2>
+
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+          <div className="space-y-2">
             <p>
               <span className="font-medium">Name:</span> Rifat Sarker
-            </p>
-            <p>
-              <span className="font-medium">Age:</span> 25 Years
             </p>
             <p>
               <span className="font-medium">Nationality:</span> Bangladeshi
@@ -53,45 +62,72 @@ export default function AboutSection() {
               <span className="font-medium">Languages:</span> English, Bengali
             </p>
           </div>
-          <div>
+
+          <div className="space-y-2">
             <p>
-              <span className="font-medium">Address:</span> Dhaka, Bangladesh
-            </p>
-            <p>
-              <span className="font-medium">Phone:</span> +880 1642550487
+              <span className="font-medium">Location:</span> Dhaka, Bangladesh
             </p>
             <p>
               <span className="font-medium">Email:</span> rifatswd@gmail.com
+            </p>
+            <p>
+              <span className="font-medium">Phone:</span> +880 1642550487
             </p>
           </div>
         </div>
       </div>
 
+      {/* Experience Section */}
+      <div>
+        <h2 className="text-2xl font-semibold mb-6">Professional Experience</h2>
+
+        <div className="border rounded-lg p-6 space-y-2">
+          <h3 className="text-lg font-semibold">Backend Developer</h3>
+
+          <p className="text-sm font-medium">SM Technology</p>
+
+          <p className="text-sm text-muted-foreground">Aug 2026 – Present</p>
+
+          <ul className="list-disc list-inside text-sm text-muted-foreground space-y-1 mt-2">
+            <li>Develop and maintain RESTful APIs using Node.js and Express</li>
+            <li>Design scalable database schemas using PostgreSQL</li>
+            <li>Implement secure authentication using JWT</li>
+            <li>Build role-based access control (RBAC) systems</li>
+            <li>Collaborate with frontend developers to integrate APIs</li>
+          </ul>
+        </div>
+      </div>
+
       {/* Expertise Section */}
       <div>
-        <h3 className="text-xl font-semibold mb-4">My Expertise</h3>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-          <div className="p-4 border rounded-lg">
-            <h4 className="font-medium mb-2">Frontend Development</h4>
+        <h2 className="text-2xl font-semibold mb-6">My Expertise</h2>
+
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="p-5 border rounded-lg">
+            <h3 className="font-semibold mb-2">Backend Development</h3>
             <p className="text-sm text-muted-foreground">
-              Building responsive and interactive user interfaces with modern
-              frameworks.
+              Building scalable APIs, authentication systems, and server-side
+              applications using Node.js and Express.
             </p>
           </div>
-          <div className="p-4 border rounded-lg">
-            <h4 className="font-medium mb-2">Backend Development</h4>
+
+          <div className="p-5 border rounded-lg">
+            <h3 className="font-semibold mb-2">Database Design</h3>
             <p className="text-sm text-muted-foreground">
-              Creating robust server-side applications and RESTful APIs.
+              Designing efficient database schemas and optimizing queries using
+              PostgreSQL and MongoDB.
             </p>
           </div>
-          <div className="p-4 border rounded-lg">
-            <h4 className="font-medium mb-2">Database Management</h4>
+
+          <div className="p-5 border rounded-lg">
+            <h3 className="font-semibold mb-2">API Architecture</h3>
             <p className="text-sm text-muted-foreground">
-              Designing and optimizing database schemas for performance.
+              Designing RESTful APIs with proper authentication, RBAC, and
+              scalable backend architecture.
             </p>
           </div>
         </div>
       </div>
-    </motion.div>
+    </motion.section>
   );
 }
