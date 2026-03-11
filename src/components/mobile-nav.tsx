@@ -4,11 +4,7 @@ import { useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { Button } from "@/components/ui/button";
-import {
-  Sheet,
-  SheetContent,
-  SheetTrigger,
-} from "@/components/ui/sheet";
+import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import {
   Home,
   User,
@@ -122,7 +118,7 @@ export function MobileNav() {
                     target="_blank"
                     rel="noopener noreferrer"
                     className="duration-300 hover:scale-150"
-                  >   
+                  >
                     <X className="!h-6 !w-6" />
                     <span className="sr-only">Twitter</span>
                   </a>

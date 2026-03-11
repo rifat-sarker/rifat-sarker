@@ -117,7 +117,7 @@ export default function HomeSection() {
           </h3>
           <p className="text-muted-foreground">
             As a passionate developer, I love solving real-world problems with
-            clean code, efficient design, and meaningful UX. Whether it's
+            clean code, efficient design, and meaningful UX. Whether it is
             designing scalable backend systems or building modern frontend
             interfaces.
           </p>
