@@ -11,8 +11,6 @@
 ## 📈 Current Stats
 ![GitHub Streak](https://streak-stats.demolab.com?user=rifat-sarker&theme=react&hide_border=true&background=0D1117&stroke=0D1117&fire=FF1CF7&sideLabels=00F0FF&currStreakNum=FF1CF7&ring=FF1CF7&currStreakLabel=FF1CF7&sideNums=00F0FF)
 
----
----
 [![Rifat's GitHub stats-Dark](https://github-readme-stats.vercel.app/api?username=rifat-sarker&show_icons=true&theme=dark#gh-dark-mode-only)](https://github.com/rifat-sarker/github-readme-stats#gh-dark-mode-only)
 [![Rifat's GitHub stats-Light](https://github-readme-stats.vercel.app/api?username=rifat-sarker&show_icons=true&theme=default#gh-light-mode-only)](https://github.com/rifat-sarker/github-readme-stats#gh-light-mode-only)
 
