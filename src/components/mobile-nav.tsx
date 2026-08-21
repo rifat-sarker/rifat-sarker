@@ -19,7 +19,7 @@ import {
 import { FiFacebook, FiGithub } from "react-icons/fi";
 import { CiLinkedin } from "react-icons/ci";
 import Image from "next/image";
-import profileImg from "../../public/profile-pic.png";
+import profileImg from "../../public/rifat-photo.png";
 
 export function MobileNav() {
   const [open, setOpen] = useState(false);
@@ -73,11 +73,10 @@ export function MobileNav() {
                       <Link
                         href={route.href}
                         onClick={() => setOpen(false)}
-                        className={`flex items-center gap-3 px-3 py-2 rounded-md transition-colors ${
-                          isActive
+                        className={`flex items-center gap-3 px-3 py-2 rounded-md transition-colors ${isActive
                             ? "bg-primary text-primary-foreground"
                             : "hover:bg-muted"
-                        }`}
+                          }`}
                       >
                         <route.icon className="!h-6 !w-6" />
                         <span className="text-sm">{route.label}</span>
