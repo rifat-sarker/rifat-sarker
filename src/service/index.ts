@@ -8,7 +8,7 @@ export const getProjects = async () => {
     headers: {
       "Content-Type": "application/json",
     },
-    cache: "no-store",
+    next: { revalidate: 60 },
   });
 
   console.log("Fetching from: ", process.env.NEXT_PUBLIC_BASE_API);
@@ -28,7 +28,7 @@ export const getSkills = async () => {
     headers: {
       "Content-Type": "application/json",
     },
-    cache: "no-store",
+    next: { revalidate: 60 },
   });
 
   if (!res.ok) {
@@ -45,7 +45,7 @@ export const getBlogs = async () => {
     headers: {
       "Content-Type": "application/json",
     },
-    cache: "no-store",
+    next: { revalidate: 60 },
   });
 
   if (!res.ok) {
@@ -59,7 +59,7 @@ export const getBlogs = async () => {
 export async function getBlogById(id: string): Promise<Blog | null> {
   try {
     const res = await fetch(`${process.env.NEXT_PUBLIC_BASE_API}/blogs/${id}`, {
-      cache: "no-store",
+      next: { revalidate: 60 },
     });
 
     console.log(res);
